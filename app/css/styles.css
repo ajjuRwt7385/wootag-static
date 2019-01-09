@@ -1,61 +1,271 @@
 body {
-  background: #F5F7FA;
+  background-color: #F5F7FA;
+  background-image: linear-gradient(#F5F7FA, white);
   font-family: 'Rubik', sans-serif;
   margin: 0;
   padding: 0; }
+  body.wt-theme-dark {
+    background-image: none;
+    background-color: #12161F; }
 
 .wt-button {
-  border-radius: 100px;
-  background-color: #1FBCF0;
-  height: 48px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 0 40px;
+  background-color: #1FBCF0;
+  border: none;
+  border-radius: 100px;
   color: white;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Rubik', sans-serif;
   font-size: 12px;
   font-weight: 500;
+  height: 48px;
+  justify-content: center;
   letter-spacing: 0.1em;
-  font-family: 'Rubik', sans-serif;
-  border: none; }
+  padding: 0 40px; }
+
+.play-button-circular {
+  align-items: center;
+  background: none;
+  border: 2px solid #1FBCF0;
+  border-radius: 100%;
+  color: #1FBCF0;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  width: 48px; }
+  .play-button-circular i {
+    font-size: 20px; }
+  .play-button-circular:hover {
+    background-color: #1FBCF0;
+    color: white; }
+
+button:active,
+button:target,
+button:visited,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important; }
+
+.play-button-with-text {
+  align-items: center;
+  display: flex;
+  margin-top: 30px; }
+  .play-button-with-text > div {
+    color: #1FBCF0;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 10px;
+    letter-spacing: 0.05em; }
+
+.wt-navbar-brand {
+  background-image: url("../images/wootag-logo-light.svg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  display: block;
+  height: 24px;
+  width: 110px; }
+
+.wt-theme-dark .wt-navbar-brand {
+  background-image: url("../images/wootag-logo-dark.svg"); }
 
 .wt-title {
-  font-family: 'Rubik', sans-serif;
   color: #454463;
+  font-family: 'Rubik', sans-serif;
   font-weight: 300; }
 
 .wt-title__large {
-  font-size: 76px; }
+  font-size: 48px;
+  margin: 0 0 30px;
+  line-height: 1.2em; }
 
 p {
   color: #8B909F;
-  font-size: 18px; }
+  font-size: 16px;
+  line-height: 1.7em; }
 
+/* centered columns styles */
+.row-centered {
+  display: block; }
+
+.row__padTB100 {
+  padding-bottom: 50px;
+  padding-top: 50px; }
+
+@media (min-width: 992px) {
+  .wt-title__large {
+    font-size: 76px;
+    margin: 0 0 30px; }
+  p {
+    font-size: 18px; }
+  .row__padTB100 {
+    padding-bottom: 100px;
+    padding-top: 100px; }
+  .row-centered {
+    display: flex;
+    justify-content: center; } }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+/* 
+// Header Starts---
+*/
+header {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  transition: height 0.1s ease-in-out;
+  width: 100%;
+  z-index: 500; }
+  header.hasScrolled {
+    height: 80px; }
+    header.hasScrolled .wt-navbar-container {
+      transition: height 0.1s ease-in-out;
+      height: 80px; }
+
+/* 
+// Header Ends---
+*/
+.wt-body {
+  padding-top: 100px; }
+
+/* 
+// Navbar Starts---
+*/
 .wt-navbar-bg {
-  background: #fff; }
+  background: #fff;
+  height: inherit; }
 
 .wt-navbar .wt-navbar-container {
-  display: flex;
   align-items: center;
+  display: flex;
   height: 100px;
   justify-content: space-between; }
   .wt-navbar .wt-navbar-container .wt-navbar-left {
     display: flex; }
-  .wt-navbar .wt-navbar-container .wt-navbar-items {
-    margin: 0;
-    list-style: none;
-    display: flex;
-    align-items: center; }
-    .wt-navbar .wt-navbar-container .wt-navbar-items li {
-      margin: 0 20px; }
-      .wt-navbar .wt-navbar-container .wt-navbar-items li a {
-        text-decoration: none;
-        font-size: 12px;
-        font-weight: 500;
-        color: #454463; }
+  .wt-navbar .wt-navbar-container .wt-button--navbar {
+    padding: 0 43px; }
+
+.wt-navbar-items {
+  align-items: center;
+  display: none;
+  list-style: none;
+  margin: 0; }
+  .wt-navbar-items li {
+    margin: 0 20px; }
+    .wt-navbar-items li a {
+      color: #454463;
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: none; }
+
+@media (min-width: 992px) {
+  .wt-navbar-items {
+    display: flex; } }
 
 .wt-theme-dark .wt-navbar-bg {
   background: #12161F; }
 
 .wt-theme-dark .wt-navbar .wt-navbar-items li a {
   color: white; }
+
+/* 
+// Navbar Ends---
+*/
+/*
+// Home Logo Slider---
+*/
+.slider-client-logos {
+  margin-bottom: 50px; }
+  .slider-client-logos .slick-slide {
+    width: 140px; }
+    .slider-client-logos .slick-slide img {
+      margin: 0 auto; }
+  .slider-client-logos .slick-arrow {
+    display: none !important; }
+
+.home-featured-player {
+  position: relative;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .home-featured-player .featured-player {
+    background: gray;
+    border-radius: 12px;
+    width: 100%;
+    height: 498px;
+    position: relative; }
+  .home-featured-player .pulse-bg-animation {
+    position: absolute;
+    width: 1920px;
+    height: 1920px; }
+    .home-featured-player .pulse-bg-animation .pulse {
+      border-radius: 100%;
+      border: 1px solid #454463;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: scale(0); }
+    .home-featured-player .pulse-bg-animation .pulse:nth-child(1) {
+      animation: move 5s infinite ease-out; }
+    .home-featured-player .pulse-bg-animation .pulse:nth-child(2) {
+      animation: move2 5s infinite ease-out; }
+    .home-featured-player .pulse-bg-animation .pulse:nth-child(3) {
+      animation: move3 5s infinite ease-out; }
+
+@keyframes move {
+  50%, 100% {
+    opacity: 0;
+    transform: scale(1); }
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  40% {
+    opacity: 0; } }
+
+@keyframes move2 {
+  60%, 100% {
+    opacity: 0;
+    transform: scale(1); }
+  0%, 10% {
+    opacity: 0;
+    transform: scale(0); }
+  20% {
+    opacity: 1; }
+  50% {
+    opacity: 0; } }
+
+@keyframes move3 {
+  70%, 100% {
+    opacity: 0;
+    transform: scale(1); }
+  0%, 20% {
+    opacity: 0;
+    transform: scale(0); }
+  30% {
+    opacity: 1; }
+  60% {
+    opacity: 0; } }

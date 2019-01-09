@@ -6,26 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title></title>
   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
+  <!-- Material icons CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Slick Slider CSS -->
+  <link href="libs/slick/slick.css" rel="stylesheet">
   <!--build:css css/styles.min.css-->
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/print.css">
   <!--endbuild-->
 </head>
 
-<body>
+<body class=""> <!-- add `wt-theme-dark` class for dark body -->
+  <!-- Header -->
   <div class="container-fluid">
-    <!-- Header -->
-    <header class="row">    <!-- add `wt-theme-dark` class for dark nav -->
+    <header id="wt-header" class="row">  <!-- add `wt-theme-dark` class to here or any parent for dark nav -->  
       <div class="col-sm-12 wt-navbar-bg">
         <nav class="wt-navbar">      
           <div class="container">
             <div class="wt-navbar-container">
               <div class="wt-navbar-left">
                 <div class="wt-navbar-logo">
-                  <a class="wt-navbar-brand" href="#">Wootag</a>
+                  <a class="wt-navbar-brand" href="#"></a>
                 </div>
                 <ul class="wt-navbar-items">
                   <li><a href="#">PLATFORM TOUR</a></li>
@@ -41,17 +44,77 @@
         </nav>
       </div>
     </header>
-    <!-- Go beyond views -->
-    <div class="row">
-      <div class="col-sm-12">
+    <main class="wt-body row">
+      <div class="col-sm-12">        
         <div class="container">
-          <h1 class="wt-title wt-title__large">Go beyond views</h1>
-          <p>Our revolutionary video experience turns viewers into customers by letting them interact with your video and share it across multiple channels. You can measure it easily in real time and get a far more vivid picture of your customers than with ordinary video.</p>
+          <!-- Go beyond views -->
+          <div class="row row-centered row__padTB100">
+            <div class="col-sm-12 col-md-10">            
+              <h1 class="wt-title wt-title__large">Go beyond views</h1>
+              <p>Our revolutionary video experience turns viewers into customers by letting them interact with your video and share it across multiple channels. You can measure it easily in real time and get a far more vivid picture of your customers than with ordinary video.</p>
+              <div class="play-button-with-text">
+                <button class="play-button-circular"><i class="material-icons">play_arrow</i></button><div>WATCH VIDEO</div>
+              </div>
+            </div>
+          </div>
+          <!-- Client Logos slider -->
+          <div class="row row-centered">
+            <div class="col-sm-12 col-md-10">
+              <section class="slider-client-logos">
+                <div>
+                  <img src="images/client_logos/visa.svg" style="height:21px;width:66px;">
+                </div>
+                <div>
+                  <img src="images/client_logos/paypal.svg" style="height:24px;width:88px;">
+                </div>
+                <div>
+                  <img src="images/client_logos/coke.svg" style="height:29px;width:88px;">
+                </div>
+                <div>
+                  <img src="images/client_logos/hyundai.svg" style="height:24px;width:88px;">
+                </div>
+                <div>
+                  <img src="images/client_logos/nestle.svg" style="height:24px;width:88px;">
+                </div>
+                <div>
+                  <img src="images/client_logos/groupm.svg" style="height:24px;width:88px;">
+                </div>
+                <div>
+                  <img src="images/client_logos/visa.svg" style="height:21px;width:66px;">
+                </div>
+                <div>
+                  <img src="images/client_logos/paypal.svg" style="height:24px;width:88px;">
+                </div>
+                <div>
+                  <img src="images/client_logos/coke.svg" style="height:29px;width:88px;">
+                </div>
+                <div>
+                  <img src="images/client_logos/hyundai.svg" style="height:24px;width:88px;">
+                </div>                
+              </section>
+            </div>
+          </div>
+          <!-- Client Logos slider -->
+          <div class="row row-centered">
+            <div class="col-sm-12 col-md-10">
+              <div class="home-featured-player">
+                <div class="pulse-bg-animation">
+                  <div class="pulse"></div>
+                  <div class="pulse"></div>
+                  <div class="pulse"></div>
+                </div>
+                <div class="featured-player"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+    <footer>here goes the footer!</footer>
   </div>
-  
+  <!-- Slick slider -->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="libs/slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <!--build:js js/main.min.js -->
   <script src="js/lib/a-library.js"></script>
   <script src="js/lib/another-library.js"></script>

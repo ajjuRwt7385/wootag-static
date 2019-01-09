@@ -1,0 +1,61 @@
+body {
+  background: #F5F7FA;
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.wt-button {
+  border-radius: 100px;
+  background-color: #1FBCF0;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-family: 'Rubik', sans-serif;
+  border: none; }
+
+.wt-title {
+  font-family: 'Rubik', sans-serif;
+  color: #454463;
+  font-weight: 300; }
+
+.wt-title__large {
+  font-size: 76px; }
+
+p {
+  color: #8B909F;
+  font-size: 18px; }
+
+.wt-navbar-bg {
+  background: #fff; }
+
+.wt-navbar .wt-navbar-container {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  justify-content: space-between; }
+  .wt-navbar .wt-navbar-container .wt-navbar-left {
+    display: flex; }
+  .wt-navbar .wt-navbar-container .wt-navbar-items {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center; }
+    .wt-navbar .wt-navbar-container .wt-navbar-items li {
+      margin: 0 20px; }
+      .wt-navbar .wt-navbar-container .wt-navbar-items li a {
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+        color: #454463; }
+
+.wt-theme-dark .wt-navbar-bg {
+  background: #12161F; }
+
+.wt-theme-dark .wt-navbar .wt-navbar-items li a {
+  color: white; }

@@ -1,0 +1,89 @@
+// Variables---
+$color_text_dark_gray: #454463;
+$color_text_light_gray: #8B909F;
+$color_wootag_blue: #1FBCF0;
+$color_theme_dark: #12161F;
+
+// Global styles---
+body {
+  background: #F5F7FA ;
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.wt-button{
+  border-radius: 100px;
+  background-color: $color_wootag_blue;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:0 40px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-family: 'Rubik', sans-serif;
+  border:none;
+}
+.wt-title{
+  font-family: 'Rubik', sans-serif;
+  color: $color_text_dark_gray;
+  font-weight: 300;
+}
+.wt-title__large{
+  font-size: 76px;
+}
+
+p{
+  color: $color_text_light_gray;
+  font-size: 18px;
+}
+// Navbar---
+.wt-navbar-bg{
+  background:#fff;
+}
+.wt-navbar{  
+  .wt-navbar-container{
+    display: flex;
+    align-items: center;
+    height:100px;
+    justify-content: space-between;
+    .wt-navbar-left{
+      display: flex;
+    }    
+    .wt-button--navbar{}
+    .wt-navbar-items{
+      margin:0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      li{
+        margin: 0 20px;
+        a{
+          text-decoration: none;
+          font-size:12px;
+          font-weight: 500;
+          color: $color_text_dark_gray;
+        }
+      }
+    }
+  }  
+}
+
+// For dark theme nav---
+.wt-theme-dark{
+  .wt-navbar-bg{
+    background: $color_theme_dark;
+  }
+  .wt-navbar{
+    .wt-navbar-items{
+      li{
+        a{
+          color: white;
+        }
+      }
+    }
+  }
+}
+

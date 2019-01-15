@@ -15,8 +15,30 @@ function stickyNavFunc() {
     header.classList.remove("hasScrolled");
   }
 }
+// utils- hostname---
+var host = window.location.hostname === 'localhost' ? 'wtstaging.wootag.com' : window.location.hostname;
+var domain = `https://${host}`;
+function extractHostname(url) {
+  var hostname;
+  //find & remove protocol (http, ftp, etc.) and get hostname
 
+  if (url.indexOf("//") > -1) {
+      hostname = url.split('/')[2];
+  }
+  else {
+      hostname = url.split('/')[0];
+  }
+
+  //find & remove port number
+  hostname = hostname.split(':')[0];
+  //find & remove "?"
+  hostname = hostname.split('?')[0];
+
+  return hostname;
+}
+//---
 $(document).on('ready', function() {
+  // Responsive mobile navigation toggle---
   $('.mobile-menu-btn').on('click', function(){
     if($(this).hasClass('isOpen')) {
       $(this).removeClass('isOpen');
@@ -26,6 +48,7 @@ $(document).on('ready', function() {
       $('header').addClass('mobile-active');
     }
   });
+  // Logo slider for home and explore page---
   $('.slider-client-logos').slick({
     autoplay: true,
     infinite: true,
@@ -49,17 +72,12 @@ $(document).on('ready', function() {
           slidesToScroll: 3
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
   // Platform Tour Interactivity slider---
   $('.slider-platform-interactivity').slick({
-    // autoplay: true,
     infinite: false,
     arrows: true,
-    // autoplaySpeed: 5000,
     slidesToShow: 5,
     slidesToScroll: 5,
     nextArrow:$('.interactivity-slide-next-button'),
@@ -95,8 +113,10 @@ $(document).on('ready', function() {
       }
     });
   });
-  //init---
+  //init platform slider---
   $('.slider-platform-interactivity .slick-slide:first-child').click();
+  //------------------------------------------------------------------------------------------------
+  //------------------------------------------------------------------------------------------------
 
   // Sit back slider---
   $('.slider-sitback_interact').slick({
@@ -106,7 +126,7 @@ $(document).on('ready', function() {
     prevArrow:$('.slide-prev-button'),
   });
 
-  // Platform scroll to section---
+  // Platform smooth scroll to section from footer links---
   // Select all links with hashes
   $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -140,6 +160,74 @@ $(document).on('ready', function() {
             $target.focus(); // Set focus again
           };
         });
+      }
+    }
+  });
+
+  // Explore page videos fetch---
+  var currentPage = $('body').data('page');
+  console.log('currentPage', currentPage);
+  switch(currentPage) {
+    case 'explore': {
+      // fetch video items---
+      $.ajax({url: domain+"/api/videos?category=", success: function(result){
+        var items = result.items;
+        console.log('items', items);
+        items.forEach((item, idx) => {
+          
+          if($('#explore_video_items').length) {
+            var hostName = item.wootag_url && extractHostname(item.wootag_url);
+            var videoUrl = hostName && '//'+hostName+'/embed/'+item.playback_id;
+            $('#explore_video_items').append('<div class="col-sm-12 col-md-6 video_item"><a href="#" data-href="'+videoUrl+'" data-type="overlay-iframe"><div class="img"><img src="'+item.img+'" alt="'+item.title+'" /><div class="overlay"><div class="button-circular"><i class="material-icons">play_arrow</i></div><div class="detail"><div class="title">'+item.title+'</div><div class="category">'+item.category+'</div></div></div></div></a></div>');
+            // $('#explore_video_items').append('<div class="col-sm-12 col-md-6 video_item"><div class="iframe-responsive"><iframe src="'+videoUrl+'" width="100%" height="480"></iframe></div></div>');
+          }
+        });        
+        // item click event to show iframe video in overlay---
+        $('.video_item a').on('click', function(e){
+          e.preventDefault();
+          var videoUrl = $(this).data('href');
+          showOverlay({ type: 'iframe', href: videoUrl });
+        });
+      }});
+      
+      break;
+    }
+    case 'home' : {
+      $('a.go-beyond-views-link').on('click', function(e){
+        e.preventDefault();
+        var videoUrl = $(this).data('href');
+        showOverlay({ type: 'iframe', href: videoUrl });
+      });
+      break;
+    }
+    default: {
+      return;
+    }
+  }
+  // closing overlay event for all pages--
+  function showOverlay(data) {
+    var type = data && data.type;
+    if(type === 'iframe') {      
+      var videoUrl = data.href;
+      $('.overlay-lightbox iframe').attr('src', videoUrl+'?autoplay=1');
+      $('.overlay-lightbox').addClass('visible');
+      $('body').addClass('no-scroll');
+    }
+  }
+  function closeOverlay() {
+    $('.overlay-lightbox iframe').attr('src', '');
+    $('.overlay-lightbox').removeClass('visible');
+    $('body').removeClass('no-scroll');
+  }
+  $('.overlay-lightbox .button-close').on('click', function(e) {
+    e.preventDefault();
+    closeOverlay();
+  });
+  // key events--
+  $(document).keyup(function(e) {
+    if (e.key === "Escape") { // escape key maps to keycode `27`
+      if($('.overlay-lightbox').length && $('.overlay-lightbox').hasClass('visible')) {
+        closeOverlay();
       }
     }
   });

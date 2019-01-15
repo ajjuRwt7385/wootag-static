@@ -4,10 +4,19 @@
 @import 'form';
 
 $header_height: 100px;
+$header_scrolled_height: 80px;
+$header_height_mobile: 60px;
 /* 
 // Header Starts---
 */
 header{
+  &:before {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+  }
   height:$header_height;
   position: fixed;
   top:0;
@@ -15,12 +24,20 @@ header{
   width:100%;
   z-index: 500;
   &.hasScrolled {
-    height: 80px;
+    height: $header_height_mobile;
     box-shadow: 0 0 1px 1px rgba(34,45,57,.15);
     .wt-navbar-container{
       transition: height 0.1s ease-in-out;
-      height: 80px;
+      height: $header_height_mobile;
     }
+  }
+  @media (min-width: 768px) {
+    &.hasScrolled {
+      height: $header_scrolled_height;
+      .wt-navbar-container{
+        height: $header_scrolled_height;
+      }
+    }    
   }
   &.mobile-active{
     height: 100vh;
@@ -34,9 +51,6 @@ header{
           height: 100vh;
           align-items: center;
         } 
-        .wt-navbar-right {
-
-        }
       }
     }
     .wt-navbar-logo{
@@ -67,9 +81,6 @@ header{
 
 .wt-body{
   padding-top:80px;
-}
-.row__padT120{
-  padding-top:120px;
 }
 
 /* 
@@ -173,6 +184,11 @@ header{
         a{
           color: $color_text_white;
         }
+        &.selected{
+          a{
+            color: $color_wootag_blue;
+          }
+        }
       }
     }
   }
@@ -252,8 +268,13 @@ header{
       margin:0 auto;
     }
   }
-  .slick-arrow{
-    display: none !important;
+  &.explore-logos{
+    margin: 50px 0 20px;
+    .slick-slide{
+      img{
+        margin: 0;
+      }
+    }
   }
 }
 .zIndexOne{
@@ -637,6 +658,9 @@ footer{
       width:54px !important;
       background: $color_wootag_blue;
       padding:0;
+      &:hover{
+        background: $color_wootag_blue_hover;
+      }
       a {
         color: $color_text_white;
         width:100%;
@@ -663,28 +687,46 @@ footer{
       >div:nth-child(2){
         margin: 0 40px;
       }
-      a:hover{
-        .social-icons{
-          fill: $color_link_hover;
-        }
-        i{
-          color: $color_link_hover;
-        }
-      }
+      // a:hover{
+      //   .social-icons{
+      //     fill: $color_link_hover;
+      //   }
+      // }
       .social-icons{
         fill: $color_text_light_gray;
       }
       .wt-social-facebook{
-        height:40px;
-        width:40px;
+        .icon{
+          height:40px;
+          width:40px;
+        }
+        &:hover{
+          #Facebook{
+            fill: #3b5998;
+          }          
+        }
       }
       .wt-social-twitter{
-        height:40px;
-        width:40px;
+        .icon{
+          height:40px;
+          width:40px;
+        }
+        &:hover {
+          #Twitter{
+            fill: #1DA1F2;
+          }
+        }
       }
-      i{
-        color: $color_text_light_gray;
-        font-size: 40px;
+      .wt-social-linkedin{
+        .icon{
+          height:40px;
+          width:40px;
+        }
+        &:hover{
+          #linkedIn{
+            fill: #0077B5;
+          }
+        }
       }
     }
   }
@@ -702,12 +744,22 @@ footer{
           margin: 0 30px;
         }
         .wt-social-facebook{
-          height:20px;
-          width:20px;
+          .icon{
+            height:18px;
+            width:18px;
+          }          
         }
         .wt-social-twitter{
-          height:20px;
-          width:20px;
+          .icon{
+            height:18px;
+            width:18px;
+          }
+        }
+        .wt-social-linkedin{
+          .icon{
+            height:18px;
+            width:18px;
+          }
         }
         i{
           color: $color_text_light_gray;
@@ -755,10 +807,14 @@ footer{
   .slider-platform-interactivity{
     margin-top: 50px;
     margin-bottom: 40px;
-    position: relative;    
+    position: relative;
+    .slick-slide{
+      outline: none; 
+    }
   }
   .slide-platform-interactivity{
     cursor: pointer;
+    outline: none;
     .item-icon{
       align-items: center;    
       border-radius: 100%;    
@@ -944,5 +1000,108 @@ footer{
       }
     }
     
+  }
+}
+
+
+/*
+* Explore page styles---
+*/
+
+.explore-featured{
+  .slide-sitback{
+    padding-bottom: 60px;
+    display: block;
+    &:nth-child(2n){
+      flex-direction: row-reverse;
+    }
+  }
+  @media (min-width: 768px) {
+    .slide-sitback{
+      display: flex;
+      padding-bottom: 120px;
+    }
+  }
+}
+#explore-videos{
+  outline: none;
+}
+#explore_video_items{
+  .video_item{
+    overflow: hidden;
+    margin-bottom:30px;
+    a{
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      outline: 0;
+      overflow: hidden;
+      .img{
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%;
+        background-color: #fff;
+        margin: 0;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .overlay{
+        width:100%;
+        height:100%;
+        position: absolute;
+        left:0;
+        top:0;
+        transition: all 0.2s ease;
+        background-color: rgba(0,0,0,0.8);
+        display: flex;
+        padding:0 20px;
+        align-items: center;        
+      }
+      .button-circular{
+        min-height:60px;
+        min-width:60px;
+        i{
+          font-size: 24px;
+        }
+      }
+      .detail{
+        margin-left: 24px;
+        color: $color_text_white;
+      }
+      .title{
+        font-size: 24px;
+        font-weight: 300;
+      }
+      .category{
+        font-size: 12px;
+        text-transform: capitalize;
+      }
+      &:hover{
+        .overlay{
+          background-color: rgba(0,0,0,0);
+        }
+        .detail{
+          color: $color_wootag_blue;
+          text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); 
+        }
+        .button-circular{
+          background-color: $color_wootag_blue;
+          color: $color_text_white;
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      a{
+        .button-circular{
+          min-height:80px;
+          min-width:80px;
+        }
+        .overlay {
+          padding: 0 80px;
+        }
+      }
+    }
   }
 }

@@ -2,11 +2,15 @@
 body {
   background-color: #ffffff ;
   font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
   &.wt-theme-dark{
     background-image: none;
     background-color: $color_theme_dark;
+  }
+  &.no-scroll{
+    overflow: hidden;
   }
 }
 .bg-gradient{
@@ -35,10 +39,14 @@ body {
   justify-content: center;
   letter-spacing: 0.1em;
   padding:0 40px;
+  transition: all 0.2s ease;
   &.wt-button--large{
     height:60px;
     padding: 0 50px;
     font-size: 14px;
+  }
+  &:hover{
+    background: $color_wootag_blue_hover;
   }
 }
 // Circular Play Button---
@@ -219,6 +227,12 @@ div.hr{
   padding-bottom: 50px;
   padding-top: 50px;
 }
+.row__padT100{
+  padding-top: 50px;
+}
+.row__padT120{
+  padding-top:60px;
+}
 .row__padB100{
   padding-bottom: 50px;
 }
@@ -228,7 +242,9 @@ div.hr{
 .marB0 {
   margin-bottom: 0 !important;
 }
-
+.row{
+  outline: none;
+}
 @media (min-width: 992px) {
   .wt-title__large{
     font-size: 76px;
@@ -251,6 +267,12 @@ div.hr{
   .row__padTB100{
     padding-bottom: 100px;
     padding-top: 100px;
+  }
+  .row__padT100{
+    padding-top: 100px;
+  }
+  .row__padT120{
+    padding-top:120px;
   }
   .row__padB100{
     padding-bottom: 100px;
@@ -310,4 +332,62 @@ div.hr{
 
   /* Support for IE. */
   font-feature-settings: 'liga';
+}
+
+// Lightbox for video iframe---
+.overlay-lightbox{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2147483647;
+  background-color: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.2s ease;
+  .overlay-content{
+    max-width:none;
+    width:100%;
+    background-color: $color_theme_dark;
+    position: relative;
+  }
+  .button-close{
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    .button-circular{
+      width:30px;
+      height: 30px;
+    }
+  }
+  &.visible {
+    display: flex;
+    opacity: 1;
+  }
+  @media (min-width: 768px) {
+    .overlay-content{
+      max-width: 70%;
+    }
+    .button-close{
+      top: -60px;
+      .button-circular{
+        width:48px;
+        height: 48px;
+      }
+    }
+  }
+  @media screen and (orientation:portrait) {
+    .overlay-content{
+      width: 100%;
+    }
+  }
+  @media screen and (orientation:landscape) {
+    .overlay-content{
+      width:80%;
+    }
+  }
 }

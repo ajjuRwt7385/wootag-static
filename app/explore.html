@@ -18,7 +18,7 @@
   <!--endbuild-->
 </head>
 
-<body class="" data-page="home"> <!-- add `wt-theme-dark` class for dark body -->
+<body class="wt-theme-dark" data-page="explore"> <!-- add `wt-theme-dark` class for dark body -->
   <!-- Header -->
   <div class="container-fluid">
     <header id="wt-header" class="row ">  <!-- add `wt-theme-dark` class to here or any parent for dark nav -->  
@@ -33,7 +33,7 @@
                 <ul class="wt-navbar-items">
                   <li><a href="platform-tour.html">PLATFORM TOUR</a></li>
                   <li><a href="#">WHY WOOTAG</a></li>
-                  <li><a href="explore.html">EXPLORE</a></li>
+                  <li class="selected"><a href="explore.html">EXPLORE</a></li>
                   <li><a href="#">GET STARTED</a></li>
                   <li><a href="#">BLOG</a></li>
                 </ul>                
@@ -63,167 +63,63 @@
         <div class="row bg-gradient">
           <div class="container">
             <!-- Go beyond views -->
-            <div class="row row-centered row__padTB100 row__padT120 zIndexOne">
-              <div class="col-sm-12 col-md-8">            
-                <h1 class="wt-title wt-title__large">Go beyond views</h1>
-                <p>Our revolutionary video experience turns viewers into customers by letting them interact with your video and share it across multiple channels. You can measure it easily in real time and get a far more vivid picture of your customers than with ordinary video.</p>
-                <div class="play-button-with-text">
-                  <a href="#" class="go-beyond-views-link" data-href="//www.wootag.com/embed/473ABC-9612-AEEB7D722D-8C9E-499A?autoplay=1"><div class="button-circular"><i class="material-icons">play_arrow</i></div><span>WATCH VIDEO</span></a>
-                </div>
-              </div>
-            </div>
-            <!-- Client Logos slider -->
-            <div class="row row-centered">
-              <div class="col-sm-12 col-md-8">
-                <section class="slider-client-logos">
-                  <div>
-                    <img src="images/client_logos/visa.svg" style="height:21px;width:66px;">
-                  </div>
-                  <div>
-                    <img src="images/client_logos/paypal.svg" style="height:24px;width:88px;">
-                  </div>
-                  <div>
-                    <img src="images/client_logos/coke.svg" style="height:29px;width:88px;">
-                  </div>
-                  <div>
-                    <img src="images/client_logos/hyundai.svg" style="height:24px;width:88px;">
-                  </div>
-                  <div>
-                    <img src="images/client_logos/nestle.svg" style="height:24px;width:88px;">
-                  </div>
-                  <div>
-                    <img src="images/client_logos/groupm.svg" style="height:24px;width:88px;">
-                  </div>
-                  <div>
-                    <img src="images/client_logos/visa.svg" style="height:21px;width:66px;">
-                  </div>
-                  <div>
-                    <img src="images/client_logos/paypal.svg" style="height:24px;width:88px;">
-                  </div>
-                  <div>
-                    <img src="images/client_logos/coke.svg" style="height:29px;width:88px;">
-                  </div>
-                  <div>
-                    <img src="images/client_logos/hyundai.svg" style="height:24px;width:88px;">
-                  </div>                
-                </section>
-              </div>
-            </div>
-            <!-- Main home visual/video -->
-            <div class="row row-centered">
-              <div class="col-sm-12 col-md-10 noHoriPaddingOnMobile">
-                <div class="home-featured-player">
-                  <div class="pulse-bg-animation">
-                    <div class="pulse"></div>
-                    <div class="pulse"></div>
-                    <div class="pulse"></div>
-                  </div>
-                  <div class="featured-player">
-                    <img src="images/video-sample.jpg" alt="featured"/>
+            <div class="row row-centered row__padT120 zIndexOne">
+              <div class="col-sm-12 col-md-10">            
+                <h1 class="wt-title wt-title__large">2000+ interactive videos from 500+ companies</h1>
+                <!-- Client Logos slider -->
+                <div class="row">
+                  <div class="col-sm-12">
+                    <section class="slider-client-logos explore-logos">
+                      <div>
+                        <img src="images/client_logos/visa.svg" style="height:21px;width:66px;">
+                      </div>
+                      <div>
+                        <img src="images/client_logos/paypal.svg" style="height:24px;width:88px;">
+                      </div>
+                      <div>
+                        <img src="images/client_logos/coke.svg" style="height:29px;width:88px;">
+                      </div>
+                      <div>
+                        <img src="images/client_logos/hyundai.svg" style="height:24px;width:88px;">
+                      </div>
+                      <div>
+                        <img src="images/client_logos/nestle.svg" style="height:24px;width:88px;">
+                      </div>
+                      <div>
+                        <img src="images/client_logos/groupm.svg" style="height:24px;width:88px;">
+                      </div>
+                      <div>
+                        <img src="images/client_logos/visa.svg" style="height:21px;width:66px;">
+                      </div>
+                      <div>
+                        <img src="images/client_logos/paypal.svg" style="height:24px;width:88px;">
+                      </div>
+                      <div>
+                        <img src="images/client_logos/coke.svg" style="height:29px;width:88px;">
+                      </div>
+                      <div>
+                        <img src="images/client_logos/hyundai.svg" style="height:24px;width:88px;">
+                      </div>                
+                    </section>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- wootag platform -->
-            <div class="row row-centered row__padTB100 zIndexOne">
-              <div class="col-sm-12 col-md-8">
-                <div class="section-title">WOOTAG PLATFORM</div>
-                <h2 class="section-subtitle">Start to explore the interactive possibilities</h2>
-                <p>Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
-                <button class="button-circular button--filled pulsate"><i class="material-icons">arrow_forward</i></button>
-              </div>
-            </div>          
+            </div>         
           </div>
         </div>
-      </div>
-      <!-- Testimonial -->
+      </div>     
+      
+      <!-- Customer Stories -->
       <div class="container-fluid">        
-        <div class="row row__padTB100 section-testimonial">
+        <div class="row section-sitback_interact row__padT100" id="explore-stories">
           <div class="container">
             <div class="row row-centered">
-              <div class="col-sm-12 col-md-6">
-                <div class="testimonial-content">
-                  <div class="testimonial-thumb" style="background-image:url(images/elon_musk.jpeg);"></div>
-                  <div class="testimonial-text">Wootag allows you to collaborate, experiment, and test much more effectively and efficiently.</div>
-                  <div class="testimonial-author">ELON MUSK, CEO AT TESLA</div>
-                  <button class="wt-button wt-button--large marT50">TRY WOOTAG FOR FREE</button>
-                </div>
-              </div>
-            </div>
-          </div>          
-        </div>
-      </div>
-      <!-- Personas -->
-      <div class="container-fluid">        
-          <div class="row row__padTB100 section-personas">
-            <div class="container">
-              <div class="row row-centered">
-                <div class="col-sm-12 col-md-8">
-                  <div class="personas-content">
-                      <div class="section-title">PERSONAS</div>
-                      <h2 class="section-subtitle">Personas Headline Comes Here</h2>
-                      <p>Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4 noHoriPaddingOnMobile">
-                      <div class="persona-card">
-                        <a href="#">
-                          <div class="persona-img"><img src="images/business-person.png" alt="Business Owners"/></div>
-                          <div class="persona-text">
-                            <h3>Business Owners</h3>
-                            <p>Imagine if your viewers could explore your video, and step right into the world of your products?</p>
-                            <div class="button-circular button--filled button--center button--pulsate"><i class="material-icons">arrow_forward</i></div>                        
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 noHoriPaddingOnMobile">
-                      <div class="persona-card">
-                        <a href="#">
-                          <div class="persona-img"><img src="images/agencies.jpg" alt="Agencies"/></div>
-                          <div class="persona-text">
-                            <h3>Agencies</h3>
-                            <p>Imagine if your viewers could explore your video, and step right into the world of your products?</p>
-                            <div class="button-circular button--filled button--center button--pulsate"><i class="material-icons">arrow_forward</i></div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 noHoriPaddingOnMobile">
-                      <div class="persona-card">
-                        <a href="#">
-                          <div class="persona-img"><img src="images/enterprise.jpg" alt="Enterprise"/></div>
-                          <div class="persona-text">
-                            <h3>Enterprise</h3>
-                            <p>Imagine if your viewers could explore your video, and step right into the world of your products?</p>
-                            <div class="button-circular button--filled button--center button--pulsate"><i class="material-icons">arrow_forward</i></div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>          
-          </div>
-        </div>
-      <!-- Sit, back & interact -->
-      <div class="container-fluid">        
-        <div class="row row__padTB100 section-sitback_interact">
-          <div class="container">
-            <div class="row row-centered">
-              <div class="col-sm-12 col-md-8">
-                <h2 class="wt-title wt-title__large">Sit, back &amp; interact</h2>
-                <p>Short copy about videos what was created by wootag. This text can be longer, let’s say something like this. But it’s not a problem if it’s gonna be much longer since it’s a subheadline.</p>
-              </div>
               <div class="col-sm-12">
-                <div class="slider-sitback_interact row">
+                <div class="explore-featured row">
                   <div class="slide-sitback">
                     <div class="col-sm-12 col-md-8 noHoriPaddingOnMobile">
                       <div class="iframe-responsive">
-                        <iframe src="https://wtstaging.wootag.com/embed/251662-A6EC-352AE29620-00A6-327E" width="100%" height="480"></iframe>
+                        <iframe src="//wtstaging.wootag.com/embed/251662-A6EC-352AE29620-00A6-327E?autoplay=1" width="100%" height="480"></iframe>
                       </div>
                     </div>
                     <div class="col-sm-12 col-md-4"> <!-- visible-md-block visible-lg-block -->
@@ -232,22 +128,14 @@
                         <div class="sitback-comment">
                           <div class="comment-text">“Framer’s Design interface is really solid - polished UI, amazing performance and best of all, it’s completely SVG-based.” — </div>
                           <p class="comment-by">Benjamin de Cock, Product Designer at Stripe</p>
-                        </div>
-                        <div class="slider-buttons">
-                          <div class="slide-prev-button">
-                              <div class="button-circular button--gray"><i class="material-icons">chevron_left</i></div>
-                          </div>
-                          <div class="slide-next-button">
-                              <div class="button-circular button--gray"><i class="material-icons">chevron_right</i></div>
-                          </div>
-                        </div>
+                        </div>                        
                       </div>
                     </div>
                   </div>
                   <div class="slide-sitback">
                     <div class="col-sm-12 col-md-8 noHoriPaddingOnMobile">
                       <div class="iframe-responsive">
-                        <iframe src="https://wtstaging.wootag.com/embed/251662-A6EC-352AE29620-00A6-327E" width="100%" height="480"></iframe>
+                        <iframe src="//wtstaging.wootag.com/embed/251662-A6EC-352AE29620-00A6-327E?autoplay=1" width="100%" height="480"></iframe>
                       </div>
                     </div>
                     <div class="col-sm-12 col-md-4">
@@ -257,13 +145,21 @@
                           <div class="comment-text">“Framer’s Design interface is really solid - polished UI, amazing performance and best of all, it’s completely SVG-based.” — </div>
                           <p class="comment-by">Benjamin de Cock, Product Designer at Stripe</p>
                         </div>
-                        <div class="slider-buttons">
-                          <div class="slide-prev-button">
-                              <div class="button-circular button--gray"><i class="material-icons">chevron_left</i></div>
-                          </div>
-                          <div class="slide-next-button">
-                              <div class="button-circular button--gray"><i class="material-icons">chevron_right</i></div>
-                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-sitback">
+                    <div class="col-sm-12 col-md-8 noHoriPaddingOnMobile">
+                      <div class="iframe-responsive">
+                        <iframe src="//wtstaging.wootag.com/embed/251662-A6EC-352AE29620-00A6-327E?autoplay=1" width="100%" height="480"></iframe>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                      <div class="sitback-content">
+                        <h3>OldMonk:<br/> Taste The Feeling</h3>
+                        <div class="sitback-comment">
+                          <div class="comment-text">“Framer’s Design interface is really solid - polished UI, amazing performance and best of all, it’s completely SVG-based.” — </div>
+                          <p class="comment-by">Benjamin de Cock, Product Designer at Stripe</p>
                         </div>
                       </div>
                     </div>
@@ -275,6 +171,17 @@
         </div>
       </div>
       
+      <!-- Explore videos -->
+      <div class="container-fluid" id="explore-videos">        
+        <div class="row section-explore_videos row__padT100">
+          <div class="container">
+            <div class="row row-centered" id="explore_video_items">
+                <!-- <div class="col-sm-12 col-md-6 video_item"><img src="" /></div> -->
+            </div>
+          </div>          
+        </div>
+      </div>
+
       <!-- Get Started -->
       <div class="container-fluid">        
         <div class="row row__padTB100 section-get_started">
@@ -357,14 +264,14 @@
                   <div class="wt-copyright">&COPY; 2018 Wootag Pte. Ltd.</div>
                   <div class="footer-social-links">
                     <div><a href="#" class="wt-social-facebook"><svg class="icon" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                          <g id="Artboard" transform="translate(-579.000000, -97.000000)" fill="#8B909F">
-                              <g id="SINGLE-GREY" transform="translate(487.000000, 97.000000)">
-                                  <path d="M128.711,34.685 C128.711,35.804 127.804,36.712 126.685,36.712 L117.33,36.712 L117.33,22.495 L122.102,22.495 L122.817,16.955 L117.33,16.955 L117.33,13.417 C117.33,11.813 117.776,10.72 120.076,10.72 L123.01,10.719 L123.01,5.763 C122.502,5.696 120.761,5.545 118.735,5.545 C114.505,5.545 111.609,8.127 111.609,12.869 L111.609,16.955 L106.825,16.955 L106.825,22.495 L111.609,22.495 L111.609,36.712 L94.026,36.712 C92.907,36.712 92,35.804 92,34.685 L92,2.027 C92,0.907 92.907,0 94.026,0 L126.685,0 C127.804,0 128.711,0.907 128.711,2.027 L128.711,34.685" id="Facebook"></path>
-                              </g>
-                          </g>
-                      </g>
-                  </svg></a></div>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Artboard" transform="translate(-579.000000, -97.000000)" fill="#8B909F">
+                                <g id="SINGLE-GREY" transform="translate(487.000000, 97.000000)">
+                                    <path d="M128.711,34.685 C128.711,35.804 127.804,36.712 126.685,36.712 L117.33,36.712 L117.33,22.495 L122.102,22.495 L122.817,16.955 L117.33,16.955 L117.33,13.417 C117.33,11.813 117.776,10.72 120.076,10.72 L123.01,10.719 L123.01,5.763 C122.502,5.696 120.761,5.545 118.735,5.545 C114.505,5.545 111.609,8.127 111.609,12.869 L111.609,16.955 L106.825,16.955 L106.825,22.495 L111.609,22.495 L111.609,36.712 L94.026,36.712 C92.907,36.712 92,35.804 92,34.685 L92,2.027 C92,0.907 92.907,0 94.026,0 L126.685,0 C127.804,0 128.711,0.907 128.711,2.027 L128.711,34.685" id="Facebook"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg></a></div>
                     <div><a href="#" class="wt-social-twitter">
                         <svg class="icon" viewBox="0 0 38 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -384,7 +291,7 @@
                               </g>
                           </g>
                       </g>
-                  </svg></a></div>
+                    </svg></a></div>
                   </div>
                 </div>
               </div>
@@ -412,7 +319,7 @@
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="libs/slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <!--build:js js/main.min.js -->
-  <script src="js/lib/a-library.js"></script>
+  <!-- <script src="js/lib/jquery.lazyload-any.min.js"></script> -->
   <script src="js/lib/another-library.js"></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->

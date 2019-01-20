@@ -3,6 +3,7 @@ body {
   background-color: #ffffff ;
   font-family: 'Rubik', sans-serif;
   -webkit-font-smoothing: antialiased;
+  // transform: translateZ(0);  
   margin: 0;
   padding: 0;
   &.wt-theme-dark{
@@ -194,12 +195,38 @@ p{
   }
 }
 
+ol.wt-ol{
+  li{
+    color: $color_text_light_gray;
+    font-size: 16px;
+    line-height: 1.7em;
+    list-style-type: upper-roman;
+    ul{
+      li{
+        list-style-type: lower-roman;
+      }
+    }
+  }
+}
+
 ul{
   list-style: none;
 }
-a{
+a, a:hover{
+  transition: color 0.2s ease;
   text-decoration: none;
+  &.link{
+   display: inline-block; 
+  }
+  &.link-wt-blue{
+    color: $color_wootag_blue;
+    &:hover{
+      color: $color_wootag_blue_hover;
+    }
+  }
 }
+
+
 
 div.hr{
   height:1px;
@@ -262,6 +289,11 @@ div.hr{
     }   
     &.large{
       font-size: 20px;
+    }
+  }
+  ol.wt-ol{
+    li{
+      font-size: 18px;
     }
   }
   .row__padTB100{
@@ -356,7 +388,7 @@ div.hr{
   }
   .button-close{
     position: absolute;
-    top: -35px;
+    bottom: -35px;
     left: 50%;
     transform: translateX(-50%);
     .button-circular{
@@ -373,7 +405,7 @@ div.hr{
       max-width: 70%;
     }
     .button-close{
-      top: -60px;
+      bottom: -60px;
       .button-circular{
         width:48px;
         height: 48px;
@@ -391,3 +423,22 @@ div.hr{
     }
   }
 }
+
+.animation-container{
+  overflow-x: hidden;
+}
+
+
+.form__error{
+  margin:0 0 10px 0;
+  padding:0;
+  li{
+    padding:10px;
+    border: 1px solid #F5F7FA;
+    border-radius: 5px;
+    background-color: rgba(255, 94, 91, 1); 
+    color: white;
+    margin-bottom: 10px;
+  }
+}
+

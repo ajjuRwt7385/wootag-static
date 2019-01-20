@@ -164,10 +164,104 @@ $(document).on('ready', function() {
     }
   });
 
+  const APP = {
+    api_login_url: domain + '/api/login',
+    asset_prefix: domain
+  }
   // Explore page videos fetch---
   var currentPage = $('body').data('page');
   console.log('currentPage', currentPage);
   switch(currentPage) {
+    case 'signin': {
+      var $form = $( "#login-form" ),
+            $inputs = $('#login-form :input');
+
+          $form.submit( function(e) {
+              var values = {};
+              $inputs.each(function() {
+                if (this.name) values[this.name] = $(this).val();
+              });
+              console.log(values);
+              var loginRequest = $.ajax({
+                  type: "POST",
+                  url: APP.api_login_url,
+                  crossDomain:true,
+                  cache: false,
+                  dataType: 'json',
+                  contentType: 'application/json',
+                  timeout: 5000,
+                  data: JSON.stringify(values) //$form.serialize()
+                });
+
+                loginRequest.done( function( data ) {
+
+                    // console.log(data);
+
+                    // cleaning the error message
+                    $( '.form__error', $form ).empty();
+                    // $('.has-error').removeClass('has-error');
+
+
+                    if ( !data.data.token) {
+                        var $errorDiv = $( '.form__error', $form );
+                        $.each( data.code, function( key, error ) {
+                          $errorDiv.append( '<li>' + error );
+                        });
+                    } else {
+                        if (data.data.token) {
+                          var expires = "";
+                          var name = "wootag-access-token";
+                          var value = data.data.token;
+                          var rtName = "wootag-access-refresh_token";
+                          var rtValue = data.data.refresh_token || '';
+                          document.cookie = name + "=" + value + expires + ";path=/";
+                          document.cookie = rtName + "=" + rtValue + expires + ";path=/";
+
+                          if (data.redirect) {
+                            window.location = APP.asset_prefix + data.redirect;
+                          } else {
+                            window.location = APP.asset_prefix + '/apps/authenticate?token='+value+'&refresh_token='+rtValue;
+                          }                                
+                        }
+                    }
+                });
+
+                loginRequest.fail( function(jqXHR, textStatus) {
+                  var data = (jqXHR.responseText) ? JSON.parse(jqXHR.responseText) : null;
+                  console.log("API status: " + jqXHR.status + "-" + textStatus + " from " + APP.api_login_url);
+                  if(422===jqXHR.status && data) {
+                    // $( '.form__error', $form ).empty();
+                    $( ".form__error", $form ).empty().append( "<li>" + data.description);
+                  }
+                });
+
+                e.preventDefault();
+
+          });
+
+      break;
+    }
+    case 'signup': {
+      var $form = $( "#signup-form" );
+      var emailField = document.querySelectorAll('input[type=email]')[0],
+          planNameField = document.querySelectorAll('input[name="plan-name"]')[0],
+          email = utils.urlParam('email'),
+          // planName = window.location.hash.substr(1) || "free",
+          planName = "free",
+          defaultPlan = 'Personal',
+          plans = {
+            'free' : 'Personal',
+            'startups' : 'Startups - trial',
+            'growthbiz' : 'Growth Biz - trial' },
+            planID = plans[planName];
+      email && emailField && (emailField.value=email);
+      planID = planID ? planID : defaultPlan;
+      console.log(planName);
+      console.log(planNameField);
+      console.log(planID);
+      planName && planNameField && planID && (planNameField.value=planID);
+      break;
+    }
     case 'explore': {
       // fetch video items---
       $.ajax({url: domain+"/api/videos?category=", success: function(result){
@@ -200,6 +294,11 @@ $(document).on('ready', function() {
       });
       break;
     }
+    case 'platform_tour': {
+      // AOS (Animation On Scroll)---
+      AOS.init();
+      break;
+    }
     default: {
       return;
     }
@@ -223,6 +322,8 @@ $(document).on('ready', function() {
     e.preventDefault();
     closeOverlay();
   });
+
+  
   // key events--
   $(document).keyup(function(e) {
     if (e.key === "Escape") { // escape key maps to keycode `27`

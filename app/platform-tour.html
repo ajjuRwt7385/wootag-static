@@ -13,12 +13,14 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Slick Slider CSS -->
   <link href="libs/slick/slick.css" rel="stylesheet">
+  <!-- AOS (Animation On Scroll) -->
+  <link href="libs/aos/aos.css" rel="stylesheet">
   <!--build:css css/styles.min.css-->
   <link rel="stylesheet" href="css/styles.css">
   <!--endbuild-->
 </head>
 
-<body class="" data-page="platform-tour"> <!-- add `wt-theme-dark` class for dark body -->
+<body class="" data-page="platform_tour"> <!-- add `wt-theme-dark` class for dark body -->
   <!-- Header -->
   <div class="container-fluid">
     <header id="wt-header" class="row ">  <!-- add `wt-theme-dark` class to here or any parent for dark nav -->  
@@ -49,8 +51,8 @@
                 </div>
               </div>
               <div class="wt-navbar-right">
-                <div class="login_link hide-for-small"><a href="#">LOGIN</a></div>
-                <button class="wt-button wt-button--navbar">TRY FOR FREE</button>
+                <div class="login_link hide-for-small"><a href="signin.html">LOGIN</a></div>
+                <a href="signup.html"><div class="wt-button wt-button--navbar">TRY FOR FREE</div></a>
               </div>              
               
             </div>
@@ -63,10 +65,10 @@
         <div class="row bg-gradient">
           <div class="container">
             <!-- Platform Tour -->
-            <div class="row row-centered row__padT120 zIndexOne">
+            <div class="row row-centered row__padT120 zIndexOne animation-container">
               <div class="col-sm-12 col-md-8">            
-                <h1 class="wt-title wt-title__large">Platform Tour</h1>
-                <p class="large marB0">Our revolutionary video experience turns viewers into customers by letting them interact with your video and share it across multiple channels. You can measure it easily in real time and get a far more vivid picture of your customers than with ordinary video.</p>                
+                <h1 class="wt-title wt-title__large" data-aos="fade-left">Platform Tour</h1>
+                <p class="large marB0" data-aos="fade-right">Our revolutionary video experience turns viewers into customers by letting them interact with your video and share it across multiple channels. You can measure it easily in real time and get a far more vivid picture of your customers than with ordinary video.</p>                
               </div>
             </div>
             
@@ -157,7 +159,7 @@
         </div>
       </div>
       <!-- Testimonial -->
-      <div class="container-fluid">        
+      <!-- <div class="container-fluid">        
         <div class="row row__padTB100 section-testimonial">
           <div class="container">
             <div class="row row-centered">
@@ -172,23 +174,23 @@
             </div>
           </div>          
         </div>
-      </div>
+      </div> -->
       
       
       <div class="container-fluid platform-items">     
         <!-- Platform Tour Editor -->   
-        <div class="row row__padTB100 section-platform_editor platform-item" id="platform-editor">
+        <div class="row row__padTB100 section-platform_editor platform-item animation-container" id="platform-editor">
           <div class="container">
             <div class="row row-centered">              
               <div class="col-sm-12">
                 <div class="row">
                   <div class="platform-editor-content platform-item-container">
                     <div class="col-sm-12 col-md-6 noHoriPaddingOnMobile">
-                      <div class="platform-editor-img platform-item-img">
+                      <div class="platform-editor-img platform-item-img" data-aos="fade-right" data-aos-offset="300">
                         <img src="images/platform-editor.jpg">
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 platform-item-text"> <!-- visible-md-block visible-lg-block -->
+                    <div class="col-sm-12 col-md-6 platform-item-text" data-aos="fade-left"> <!-- visible-md-block visible-lg-block -->
                       <div class="section-title">EDITOR</div>
                       <h2 class="section-subtitle">Easy as one, two, three</h2>
                       <p>Brief explanation about the editor. This text can be slightly longer, let’s say something like this.</p>
@@ -201,18 +203,18 @@
           </div>          
         </div>
         <!-- Platform Tour Player -->     
-        <div class="row row__padTB100 section-platform_player platform-item" id="platform-player">
+        <div class="row row__padTB100 section-platform_player platform-item animation-container" id="platform-player">
           <div class="container">
             <div class="row row-centered">              
               <div class="col-sm-12">
                 <div class="row">
                   <div class="platform-player-content platform-item-container">
                     <div class="col-sm-12 col-md-6 noHoriPaddingOnMobile">
-                      <div class="platform-player-img platform-item-img">
-                        <img src="images/platform-editor.jpg">
+                      <div class="platform-player-img platform-item-img" data-aos="fade-right" data-aos-offset="300">
+                        <img src="images/platform_tour/editor.png">
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 platform-item-text"> <!-- visible-md-block visible-lg-block -->
+                    <div class="col-sm-12 col-md-6 platform-item-text" data-aos="fade-left"> <!-- visible-md-block visible-lg-block -->
                       <div class="section-title">PLAYER</div>
                       <h2 class="section-subtitle">Easy as one, two, three</h2>
                       <p>Brief explanation about the player. This text can be slightly longer, let’s say something like this.</p>
@@ -225,18 +227,18 @@
           </div>          
         </div>
         <!-- Platform Tour Distribution -->     
-        <div class="row row__padTB100 section-platform_distribution platform-item" id="platform-distribution">
+        <div class="row row__padTB100 section-platform_distribution platform-item animation-container" id="platform-distribution">
           <div class="container">
             <div class="row row-centered">              
               <div class="col-sm-12">
                 <div class="row">
                   <div class="platform-distribution-content platform-item-container">
                     <div class="col-sm-12 col-md-6 noHoriPaddingOnMobile">
-                      <div class="platform-distribution-img platform-item-img">
-                        <img src="images/platform-apps.jpg">
+                      <div class="platform-distribution-img platform-item-img" data-aos="fade-right" data-aos-offset="300">
+                        <img src="images/platform_tour/apps.png">
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 platform-item-text"> <!-- visible-md-block visible-lg-block -->
+                    <div class="col-sm-12 col-md-6 platform-item-text" data-aos="fade-left"> <!-- visible-md-block visible-lg-block -->
                       <div class="section-title">DISTRIBUTION</div>
                       <h2 class="section-subtitle">Easy as one, two, three</h2>
                       <p>Brief explanation about the distribution. This text can be slightly longer, let’s say something like this.</p>
@@ -249,18 +251,22 @@
           </div>          
         </div>
         <!-- Platform Tour Analytics -->     
-        <div class="row row__padTB100 section-platform_analytics platform-item" id="platform-analytics">
+        <div class="row row__padTB100 section-platform_analytics platform-item animation-container" id="platform-analytics">
           <div class="container">
             <div class="row row-centered">              
               <div class="col-sm-12">
                 <div class="row">
                   <div class="platform-analytics-content platform-item-container">
                     <div class="col-sm-12 col-md-6 noHoriPaddingOnMobile">
-                      <div class="platform-analytics-img platform-item-img">
-                        <img src="images/platform-apps.jpg">
+                      <div class="platform-analytics-img platform-item-img" data-aos="fade-right">
+                        <img src="images/platform_tour/analytics_1.png">
+                        <div class="analytics-top-img" data-aos="zoom-in"
+                        data-aos-easing="ease-in-out-quad"
+                        data-aos-delay="300"
+                        data-aos-offset="0"><img src="images/platform_tour/analytics_2.png"></div>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 platform-item-text"> <!-- visible-md-block visible-lg-block -->
+                    <div class="col-sm-12 col-md-6 platform-item-text" data-aos="fade-left"> <!-- visible-md-block visible-lg-block -->
                       <div class="section-title">ANALYTICS</div>
                       <h2 class="section-subtitle">Easy as one, two, three</h2>
                       <p>Brief explanation about the analytics. This text can be slightly longer, let’s say something like this.</p>
@@ -273,18 +279,18 @@
           </div>          
         </div>
         <!-- Platform Tour Apps -->     
-        <div class="row row__padTB100 section-platform_apps platform-item" id="platform-apps">
+        <div class="row row__padTB100 section-platform_apps platform-item animation-container" id="platform-apps">
           <div class="container">
             <div class="row row-centered">              
               <div class="col-sm-12">
                 <div class="row">
                   <div class="platform-apps-content platform-item-container">
                     <div class="col-sm-12 col-md-6 noHoriPaddingOnMobile">
-                      <div class="platform-apps-img platform-item-img">
+                      <div class="platform-apps-img platform-item-img" data-aos="fade-right" data-aos-offset="300">
                         <img src="images/platform-apps.jpg">
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 platform-item-text"> <!-- visible-md-block visible-lg-block -->
+                    <div class="col-sm-12 col-md-6 platform-item-text" data-aos="fade-left"> <!-- visible-md-block visible-lg-block -->
                       <div class="section-title">APPS</div>
                       <h2 class="section-subtitle">Easy as one, two, three</h2>
                       <p>Brief explanation about the apps. This text can be slightly longer, let’s say something like this.</p>
@@ -303,10 +309,10 @@
       <div class="container-fluid">        
         <div class="row row__padTB100 section-get_started">
           <div class="container">
-            <div class="row row-centered">
+            <div class="row row-centered animation-container">
               <div class="col-sm-12 col-md-8">
-                <h2 class="wt-title wt-title__large">Get Started</h2>
-                <p>Our revolutionary video experience turns viewers into customers by letting them interact with your video and share it across multiple channels.</p>
+                <h2 class="wt-title wt-title__large" data-aos="fade-left">Get Started</h2>
+                <p data-aos="fade-right">Our revolutionary video experience turns viewers into customers by letting them interact with your video and share it across multiple channels.</p>
                 <button class="wt-button wt-button--large marT50 center-on-mobile">TRY WOOTAG FOR FREE</button>
               </div>
             </div>
@@ -349,8 +355,8 @@
             <ul class="footer-links">
               <li><a href="#">Blog</a></li>
               <li><a href="#">About</a></li>
-              <li><a href="#">Terms of Services</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Services</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
             </ul>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4">
@@ -422,8 +428,8 @@
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="libs/slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <!--build:js js/main.min.js -->
-  <script src="js/lib/a-library.js"></script>
-  <script src="js/lib/another-library.js"></script>
+  <!-- <script src="js/lib/a-library.js"></script> -->
+  <script src="libs/aos/aos.js"></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->
 </body>

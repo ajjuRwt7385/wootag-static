@@ -106,14 +106,19 @@ header{
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      a{
-        color: $color_wootag_blue;
-        font-size:12px;
-        font-weight: 500;
-        text-decoration: none;
-        margin-right:30px;
-        letter-spacing: 0.05em;
-      }    
+      .login_link {
+        a{
+          color: $color_wootag_blue;
+          font-size:12px;
+          font-weight: 500;
+          text-decoration: none;
+          margin-right:30px;
+          letter-spacing: 0.05em;
+          &:hover {
+            color: $color_wootag_blue_hover;
+          }
+        }    
+      }
     }
   }  
 }
@@ -147,11 +152,9 @@ header{
   display: none;
 }
 @media (min-width: 992px) {  
-  .wt-navbar-items{
-    display: flex;
-  }
+  .wt-navbar-items,
   .wt-button--navbar{
-    display: block;
+    display: flex;
   }
   .wt-navbar-left{
     flex-basis: auto !important;
@@ -693,35 +696,34 @@ footer{
       //   }
       // }
       .social-icons{
-        fill: $color_text_light_gray;
+        fill: $color_text_light_gray;        
       }
-      .wt-social-facebook{
+      .wt-social-facebook,
+      .wt-social-twitter,
+      .wt-social-linkedin{
         .icon{
           height:40px;
           width:40px;
+          path{
+            transition: fill 0.2s ease; 
+          }          
         }
+      }
+      .wt-social-facebook{        
         &:hover{
           #Facebook{
             fill: #3b5998;
           }          
         }
       }
-      .wt-social-twitter{
-        .icon{
-          height:40px;
-          width:40px;
-        }
+      .wt-social-twitter{        
         &:hover {
           #Twitter{
             fill: #1DA1F2;
           }
         }
       }
-      .wt-social-linkedin{
-        .icon{
-          height:40px;
-          width:40px;
-        }
+      .wt-social-linkedin{        
         &:hover{
           #linkedIn{
             fill: #0077B5;
@@ -743,18 +745,8 @@ footer{
         >div:nth-child(2){
           margin: 0 30px;
         }
-        .wt-social-facebook{
-          .icon{
-            height:18px;
-            width:18px;
-          }          
-        }
-        .wt-social-twitter{
-          .icon{
-            height:18px;
-            width:18px;
-          }
-        }
+        .wt-social-facebook,
+        .wt-social-twitter,
         .wt-social-linkedin{
           .icon{
             height:18px;
@@ -938,6 +930,22 @@ footer{
           width:100%;
           height: auto;
         }
+        &.platform-analytics-img{
+          .analytics-top-img{
+            position: absolute;
+            left:0;            
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            >img{
+              width: 50%;
+              height: auto;
+            }
+          }
+        }
       }
       .platform-item-text{
         padding-left:15px;
@@ -971,6 +979,24 @@ footer{
           img{
             box-shadow: 0px 40px 99px 0px rgba(66, 65, 92, 0.16);
             width:auto;
+          }
+          &.platform-analytics-img{
+            display: block;
+            position: relative;
+            img{
+              box-shadow: none;
+            }
+            .analytics-top-img{
+              // position: absolute;
+              // right:50%;
+              // margin-right: -50%;
+              margin-bottom: -50px;    
+              >img{
+                width: 70%;
+                height: auto;
+                box-shadow: 0px 20px 48px 0px rgba(66, 65, 92, 0.16);
+              }          
+            }
           }
         }      
         .platform-item-text{
@@ -1103,5 +1129,43 @@ footer{
         }
       }
     }
+  }
+}
+
+/* 
+// SignIn Page---
+*/
+.wt-form{
+  .signin-label-aligner{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px;
+    label{
+      font-weight: 400;
+    }  
+  }
+  input {
+    margin: 0 0 24px;
+  }
+  .wt-button{
+    width: 200px;
+    margin-top: 5px;
+    display: inline-block;
+  }
+  .no-account{
+    margin-top:50px;
+    color: $color_text_light_gray;
+  }
+}
+#login-form,
+#signup-form{
+  margin-top:50px;
+}
+
+
+.article__privacy__content{
+  strong{
+    font-weight: 400;
+    color: $color_text_dark_gray;
   }
 }

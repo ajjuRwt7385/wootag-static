@@ -18,7 +18,7 @@
   <!--endbuild-->
 </head>
 
-<body class="wt-theme-dark" data-page="explore"> <!-- add `wt-theme-dark` class for dark body -->
+<body class="" data-page="signup"> <!-- add `wt-theme-dark` class for dark body -->
   <!-- Header -->
   <div class="container-fluid">
     <header id="wt-header" class="row ">  <!-- add `wt-theme-dark` class to here or any parent for dark nav -->  
@@ -33,7 +33,7 @@
                 <ul class="wt-navbar-items">
                   <li><a href="platform-tour.html">PLATFORM TOUR</a></li>
                   <li><a href="#">WHY WOOTAG</a></li>
-                  <li class="selected"><a href="explore.html">EXPLORE</a></li>
+                  <li><a href="explore.html">EXPLORE</a></li>
                   <li><a href="#">GET STARTED</a></li>
                   <li><a href="#">BLOG</a></li>
                 </ul>                
@@ -62,138 +62,31 @@
       <div class="container-fluid">
         <div class="row bg-gradient">
           <div class="container">
-            <!-- title top section -->
-            <div class="row row-centered row__padT120 zIndexOne">
-              <div class="col-sm-12 col-md-10">            
-                <h1 class="wt-title wt-title__large">2000+ interactive videos from 500+ companies</h1>
-                <!-- Client Logos slider -->
-                <div class="row">
-                  <div class="col-sm-12">
-                    <section class="slider-client-logos explore-logos">
-                      <div>
-                        <img src="images/client_logos/visa.svg" style="height:21px;width:66px;">
-                      </div>
-                      <div>
-                        <img src="images/client_logos/paypal.svg" style="height:24px;width:88px;">
-                      </div>
-                      <div>
-                        <img src="images/client_logos/coke.svg" style="height:29px;width:88px;">
-                      </div>
-                      <div>
-                        <img src="images/client_logos/hyundai.svg" style="height:24px;width:88px;">
-                      </div>
-                      <div>
-                        <img src="images/client_logos/nestle.svg" style="height:24px;width:88px;">
-                      </div>
-                      <div>
-                        <img src="images/client_logos/groupm.svg" style="height:24px;width:88px;">
-                      </div>
-                      <div>
-                        <img src="images/client_logos/visa.svg" style="height:21px;width:66px;">
-                      </div>
-                      <div>
-                        <img src="images/client_logos/paypal.svg" style="height:24px;width:88px;">
-                      </div>
-                      <div>
-                        <img src="images/client_logos/coke.svg" style="height:29px;width:88px;">
-                      </div>
-                      <div>
-                        <img src="images/client_logos/hyundai.svg" style="height:24px;width:88px;">
-                      </div>                
-                    </section>
+            <!-- Signup Form -->
+            <div class="row row-centered row__padTB100 row__padT120 zIndexOne">
+              <div class="col-sm-12 col-md-8">            
+                <h1 class="wt-title wt-title__large" data-aos="fade-left">Create your free account</h1>
+                <form id="signup-form" class="wt-form" method="POST" accept-charset="UTF-8" action="/registration" autocomplete="off" role="Form">
+                  <ul class="form__error"></ul>
+                  <input type="hidden" name="plan-name" value="free" />
+                  <div class="form-group">
+                      <div class="signin-label-aligner"><label for="name">NAME</label></div>
+                      <input type="text" required class="form-control" id="name" placeholder="Your Full Name" name="name">
+                    </div>
+                  <div class="form-group">
+                    <div class="signin-label-aligner"><label for="email">EMAIL ADDRESS</label></div>
+                    <input type="email" required class="form-control" id="email" placeholder="you@example.com" name="email">
                   </div>
-                </div>
+                  <div class="form-group">
+                    <div class="signin-label-aligner"><label for="password">PASSWORD</label></div>
+                    <input type="password" required class="form-control" id="password" placeholder="5+ characters" name="password">
+                  </div>                  
+                  <button type="submit" class="button wt-button">Sign Up</button>
+                  <div class="no-account">By clicking Sign Up You agree to the <a href="terms.html" target="_blank" class="link-wt-blue">Terms of Service</a> and <a href="privacy-policy.html" target="_blank" class="link-wt-blue">Privacy Policy</a><br /><br />Already have an account? <a href="signin.html" class="link-wt-blue">Login</a></div>
+                </form>                
               </div>
-            </div>         
+            </div>
           </div>
-        </div>
-      </div>     
-      
-      <!-- Customer Stories -->
-      <div class="container-fluid">        
-        <div class="row section-sitback_interact row__padT100" id="explore-stories">
-          <div class="container">
-            <div class="row row-centered">
-              <div class="col-sm-12">
-                <div class="explore-featured row">
-                  <div class="slide-sitback">
-                    <div class="col-sm-12 col-md-8 noHoriPaddingOnMobile">
-                      <div class="iframe-responsive">
-                        <iframe src="//wtstaging.wootag.com/embed/251662-A6EC-352AE29620-00A6-327E?autoplay=1" width="100%" height="480"></iframe>
-                      </div>
-                    </div>
-                    <div class="col-sm-12 col-md-4"> <!-- visible-md-block visible-lg-block -->
-                      <div class="sitback-content">
-                        <h3>Coca-Cola:<br/> Taste The Feeling</h3>
-                        <div class="sitback-comment">
-                          <div class="comment-text">“Framer’s Design interface is really solid - polished UI, amazing performance and best of all, it’s completely SVG-based.” — </div>
-                          <p class="comment-by">Benjamin de Cock, Product Designer at Stripe</p>
-                        </div>                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slide-sitback">
-                    <div class="col-sm-12 col-md-8 noHoriPaddingOnMobile">
-                      <div class="iframe-responsive">
-                        <iframe src="//wtstaging.wootag.com/embed/251662-A6EC-352AE29620-00A6-327E?autoplay=1" width="100%" height="480"></iframe>
-                      </div>
-                    </div>
-                    <div class="col-sm-12 col-md-4">
-                      <div class="sitback-content">
-                        <h3>Pepsi:<br/> Taste The Feeling</h3>
-                        <div class="sitback-comment">
-                          <div class="comment-text">“Framer’s Design interface is really solid - polished UI, amazing performance and best of all, it’s completely SVG-based.” — </div>
-                          <p class="comment-by">Benjamin de Cock, Product Designer at Stripe</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slide-sitback">
-                    <div class="col-sm-12 col-md-8 noHoriPaddingOnMobile">
-                      <div class="iframe-responsive">
-                        <iframe src="//wtstaging.wootag.com/embed/251662-A6EC-352AE29620-00A6-327E?autoplay=1" width="100%" height="480"></iframe>
-                      </div>
-                    </div>
-                    <div class="col-sm-12 col-md-4">
-                      <div class="sitback-content">
-                        <h3>OldMonk:<br/> Taste The Feeling</h3>
-                        <div class="sitback-comment">
-                          <div class="comment-text">“Framer’s Design interface is really solid - polished UI, amazing performance and best of all, it’s completely SVG-based.” — </div>
-                          <p class="comment-by">Benjamin de Cock, Product Designer at Stripe</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>          
-        </div>
-      </div>
-      
-      <!-- Explore videos -->
-      <div class="container-fluid" id="explore-videos">        
-        <div class="row section-explore_videos row__padT100">
-          <div class="container">
-            <div class="row" id="explore_video_items">
-                <!-- <div class="col-sm-12 col-md-6 video_item"><img src="" /></div> -->
-            </div>
-          </div>          
-        </div>
-      </div>
-
-      <!-- Get Started -->
-      <div class="container-fluid">        
-        <div class="row row__padTB100 section-get_started">
-          <div class="container">
-            <div class="row row-centered">
-              <div class="col-sm-12 col-md-8">
-                <h2 class="wt-title wt-title__large">Get Started</h2>
-                <p>Our revolutionary video experience turns viewers into customers by letting them interact with your video and share it across multiple channels.</p>
-                <button class="wt-button wt-button--large marT50 center-on-mobile">TRY WOOTAG FOR FREE</button>
-              </div>
-            </div>
-          </div>          
         </div>
       </div>
     </main>
@@ -243,7 +136,7 @@
               <form class="form-inline">
                 <div class="form-group">
                   <div class="input-group">
-                    <input type="email" class="form-control" id="email" placeholder="Email address">
+                    <input type="email" class="form-control" id="email-newsletter" placeholder="Email address">
                     <div class="input-group-addon"><a href="#"><i class="material-icons">send</i></a></div>
                   </div>
                 </div>
@@ -264,14 +157,14 @@
                   <div class="wt-copyright">&COPY; 2018 Wootag Pte. Ltd.</div>
                   <div class="footer-social-links">
                     <div><a href="#" class="wt-social-facebook"><svg class="icon" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="Artboard" transform="translate(-579.000000, -97.000000)" fill="#8B909F">
-                                <g id="SINGLE-GREY" transform="translate(487.000000, 97.000000)">
-                                    <path d="M128.711,34.685 C128.711,35.804 127.804,36.712 126.685,36.712 L117.33,36.712 L117.33,22.495 L122.102,22.495 L122.817,16.955 L117.33,16.955 L117.33,13.417 C117.33,11.813 117.776,10.72 120.076,10.72 L123.01,10.719 L123.01,5.763 C122.502,5.696 120.761,5.545 118.735,5.545 C114.505,5.545 111.609,8.127 111.609,12.869 L111.609,16.955 L106.825,16.955 L106.825,22.495 L111.609,22.495 L111.609,36.712 L94.026,36.712 C92.907,36.712 92,35.804 92,34.685 L92,2.027 C92,0.907 92.907,0 94.026,0 L126.685,0 C127.804,0 128.711,0.907 128.711,2.027 L128.711,34.685" id="Facebook"></path>
-                                </g>
-                            </g>
-                        </g>
-                    </svg></a></div>
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <g id="Artboard" transform="translate(-579.000000, -97.000000)" fill="#8B909F">
+                              <g id="SINGLE-GREY" transform="translate(487.000000, 97.000000)">
+                                  <path d="M128.711,34.685 C128.711,35.804 127.804,36.712 126.685,36.712 L117.33,36.712 L117.33,22.495 L122.102,22.495 L122.817,16.955 L117.33,16.955 L117.33,13.417 C117.33,11.813 117.776,10.72 120.076,10.72 L123.01,10.719 L123.01,5.763 C122.502,5.696 120.761,5.545 118.735,5.545 C114.505,5.545 111.609,8.127 111.609,12.869 L111.609,16.955 L106.825,16.955 L106.825,22.495 L111.609,22.495 L111.609,36.712 L94.026,36.712 C92.907,36.712 92,35.804 92,34.685 L92,2.027 C92,0.907 92.907,0 94.026,0 L126.685,0 C127.804,0 128.711,0.907 128.711,2.027 L128.711,34.685" id="Facebook"></path>
+                              </g>
+                          </g>
+                      </g>
+                  </svg></a></div>
                     <div><a href="#" class="wt-social-twitter">
                         <svg class="icon" viewBox="0 0 38 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -291,7 +184,7 @@
                               </g>
                           </g>
                       </g>
-                    </svg></a></div>
+                  </svg></a></div>
                   </div>
                 </div>
               </div>
@@ -319,7 +212,7 @@
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="libs/slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <!--build:js js/main.min.js -->
-  <!-- <script src="js/lib/jquery.lazyload-any.min.js"></script> -->
+  <script src="js/lib/a-library.js"></script>
   <script src="js/lib/another-library.js"></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->

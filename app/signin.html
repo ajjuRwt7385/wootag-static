@@ -21,50 +21,16 @@
 <body class="" data-page="signin"> <!-- add `wt-theme-dark` class for dark body -->
   <!-- Header -->
   <div class="container-fluid">
-    <header id="wt-header" class="row ">  <!-- add `wt-theme-dark` class to here or any parent for dark nav -->  
-      <div class="col-sm-12 wt-navbar-bg">
-        <nav class="wt-navbar row">      
-          <div class="container">
-            <div class="wt-navbar-container">              
-              <div class="wt-navbar-left">
-                <div class="wt-navbar-logo">
-                  <a class="wt-navbar-brand" href="index.html"></a>
-                </div>
-                <ul class="wt-navbar-items">
-                  <li><a href="platform-tour.html">PLATFORM TOUR</a></li>
-                  <li><a href="#">WHY WOOTAG</a></li>
-                  <li><a href="explore.html">EXPLORE</a></li>
-                  <li><a href="#">GET STARTED</a></li>
-                  <li><a href="#">BLOG</a></li>
-                </ul>                
-                <div class="mobile-menu-btn">
-                  <div class="menu-open">                    
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                  </div>
-                  <div class="menu-close">
-                    <div class="button-circular button--gray"><i class="material-icons">close</i></div>
-                  </div>
-                </div>
-              </div>
-              <div class="wt-navbar-right">
-                <div class="login_link hide-for-small"><a href="#">LOGIN</a></div>
-                <a href="signup.html"><div class="wt-button wt-button--navbar">TRY FOR FREE</div></a>
-              </div>              
-              
-            </div>
-          </div>      
-        </nav>
-      </div>
-    </header>
-    <main class="wt-body row">
-      <div class="container-fluid">
-        <div class="row bg-gradient">
+    <main class="row">
+      <div class="container-fluid sign-in-up-container">
+        <div class="row">
           <div class="container">
             <!-- Login Form -->
-            <div class="row row-centered row__padTB100 row__padT120 zIndexOne">
-              <div class="col-sm-12 col-md-8">            
+            <div class="row row-centered zIndexOne">
+              <div class="col-sm-12 col-md-6 row__padTB100">       
+                <div class="wt-navbar-logo">
+                  <a class="wt-navbar-brand" href="index.html"></a>
+                </div>     
                 <h1 class="wt-title wt-title__large" data-aos="fade-left">Welcome Back</h1>
                 <form id="login-form" class="wt-form">
                   <ul class="form__error"></ul>
@@ -80,129 +46,16 @@
                   <div class="no-account">Don't have an account? <a href="signup.html" class="link-wt-blue">Try Wootag for Free</a></div>
                 </form>                
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <!-- Footer -->
-    <footer class="row">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-3 col-lg-2">
-            <h4>PLATFORM TOUR</h4>
-            <ul class="footer-links">
-              <li><a href="platform-tour.html#platform-interactivity">Interactivity</a></li>
-              <li><a href="platform-tour.html#platform-editor">Editor</a></li>
-              <li><a href="platform-tour.html#platform-player">Player</a></li>
-              <li><a href="platform-tour.html#platform-distribution">Distribution</a></li>
-              <li><a href="platform-tour.html#platform-analytics">Analytics</a></li>
-              <li><a href="platform-tour.html#platform-apps">Apps</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-12 col-md-3 col-lg-2">
-            <h4>WHY WOOTAG</h4>
-            <ul class="footer-links">
-              <li><a href="why-wootag.html#wootag-business">Business Owners</a></li>
-              <li><a href="why-wootag.html#wootag-agencies">Agencies</a></li>
-              <li><a href="why-wootag.html#wootag-enterprise">Enterprise</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-12 col-md-3 col-lg-2">
-            <h4>EXPLORE</h4>
-            <ul class="footer-links">
-              <li><a href="explore.html#explore-stories">Customer Stories</a></li>
-              <li><a href="explore.html#explore-videos">Videos</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-12 col-md-3 col-lg-2">
-            <h4>COMPANY</h4>
-            <ul class="footer-links">
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="terms.html">Terms of Services</a></li>
-              <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <h4>NEWSLETTER</h4>
-            <div class="footer-newsletter">
-              <p>Get resources, curated content, and design inspiration delivered straight to your inbox.</p>
-              <form class="form-inline">
-                <div class="form-group">
-                  <div class="input-group">
-                    <input type="email" class="form-control" id="email-newsletter" placeholder="Email address">
-                    <div class="input-group-addon"><a href="#"><i class="material-icons">send</i></a></div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="hr col-sm-12"></div>
-        </div>
-        <div class="row">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="footer-copyright">
-                  <div class="wt-copyright">&COPY; 2018 Wootag Pte. Ltd.</div>
-                  <div class="footer-social-links">
-                    <div><a href="#" class="wt-social-facebook"><svg class="icon" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                          <g id="Artboard" transform="translate(-579.000000, -97.000000)" fill="#8B909F">
-                              <g id="SINGLE-GREY" transform="translate(487.000000, 97.000000)">
-                                  <path d="M128.711,34.685 C128.711,35.804 127.804,36.712 126.685,36.712 L117.33,36.712 L117.33,22.495 L122.102,22.495 L122.817,16.955 L117.33,16.955 L117.33,13.417 C117.33,11.813 117.776,10.72 120.076,10.72 L123.01,10.719 L123.01,5.763 C122.502,5.696 120.761,5.545 118.735,5.545 C114.505,5.545 111.609,8.127 111.609,12.869 L111.609,16.955 L106.825,16.955 L106.825,22.495 L111.609,22.495 L111.609,36.712 L94.026,36.712 C92.907,36.712 92,35.804 92,34.685 L92,2.027 C92,0.907 92.907,0 94.026,0 L126.685,0 C127.804,0 128.711,0.907 128.711,2.027 L128.711,34.685" id="Facebook"></path>
-                              </g>
-                          </g>
-                      </g>
-                  </svg></a></div>
-                    <div><a href="#" class="wt-social-twitter">
-                        <svg class="icon" viewBox="0 0 38 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <g id="Artboard" transform="translate(-803.000000, -102.000000)" fill="#8B909F">
-                                  <g id="SINGLE-GREY" transform="translate(487.000000, 97.000000)">
-                                      <path d="M352.76,5.618 C351.274,6.52 349.632,7.176 347.877,7.527 C346.479,5.997 344.481,5.041 342.269,5.041 C338.029,5.041 334.588,8.569 334.588,12.92 C334.588,13.538 334.654,14.137 334.786,14.714 C328.4,14.385 322.739,11.252 318.947,6.479 C318.285,7.647 317.907,9.002 317.907,10.445 C317.907,13.177 319.263,15.589 321.326,17.002 C320.068,16.964 318.881,16.606 317.843,16.02 L317.843,16.116 C317.843,19.935 320.492,23.121 324.01,23.842 C323.366,24.027 322.686,24.12 321.985,24.12 C321.49,24.12 321.007,24.072 320.539,23.98 C321.517,27.109 324.353,29.388 327.716,29.449 C325.087,31.563 321.772,32.823 318.173,32.823 C317.553,32.823 316.94,32.787 316.34,32.715 C319.74,34.947 323.781,36.252 328.119,36.252 C342.254,36.252 349.981,24.248 349.981,13.835 C349.981,13.492 349.975,13.15 349.962,12.814 C351.463,11.703 352.767,10.316 353.793,8.736 C352.417,9.362 350.935,9.786 349.381,9.976 C350.968,9.002 352.186,7.458 352.76,5.618" id="Twitter"></path>
-                                  </g>
-                              </g>
-                          </g>
-                      </svg>
-                    </a></div>
-                    <div><a href="#" class="wt-social-linkedin"><svg class="icon" viewBox="0 0 37 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                          <g id="Artboard" transform="translate(-487.000000, -99.000000)" fill="#8B909F">
-                              <g id="SINGLE-GREY" transform="translate(487.000000, 97.000000)">
-                                  <path d="M0.93,12.754 L8.12,12.754 L8.12,35.536 L0.93,35.536 L0.93,12.754 Z M27.765,12.535 C32.875,12.535 36.89,15.812 36.89,22.869 L36.89,35.536 L28.737,35.536 L28.737,23.747 C28.737,20.661 27.462,18.555 24.657,18.555 C22.512,18.555 21.319,19.976 20.764,21.346 C20.556,21.838 20.588,22.523 20.588,23.208 L20.588,35.536 L12.511,35.536 C12.511,35.536 12.615,14.653 12.511,12.754 L20.588,12.754 L20.588,16.33 C21.065,14.766 23.646,12.535 27.765,12.535 Z M4.392,2 C7.045,2 8.676,3.701 8.728,5.949 C8.728,8.157 7.045,9.905 4.342,9.905 L4.29,9.905 C1.688,9.905 0,8.163 0,5.955 C0,3.705 1.737,2 4.392,2 Z" id="linkedIn"></path>
-                              </g>
-                          </g>
-                      </g>
-                  </svg></a></div>
-                  </div>
-                </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="bg-gray"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </main>
+    
   </div>
-  <!--
-    Lightbox video player starts
-  -->
-  <div class="overlay-lightbox">
-    <div class="overlay-content">
-      <div class="iframe-responsive">
-          <iframe src="" width="100%" height="100%"></iframe>
-      </div>
-      <div class="button-close"><div class="button-circular"><i class="material-icons">close</i></div></div>      
-    </div>
-  </div>
-  <!--
-    Lightbox video player ends
-  -->
   <!-- Slick slider -->
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="libs/slick/slick.js" type="text/javascript" charset="utf-8"></script>

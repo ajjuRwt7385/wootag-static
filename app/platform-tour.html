@@ -23,25 +23,55 @@
 <body class="" data-page="platform_tour"> <!-- add `wt-theme-dark` class for dark body -->
   <!-- Header -->
   <div class="container-fluid">
-    <header id="wt-header" class="row ">  <!-- add `wt-theme-dark` class to here or any parent for dark nav -->  
-      <div class="col-sm-12 wt-navbar-bg">
-        <nav class="wt-navbar row">      
-          <div class="container">
-            <div class="wt-navbar-container">              
-              <div class="wt-navbar-left">
+      <header id="wt-header" class="row ">  <!-- add `wt-theme-dark` class to here or any parent for dark nav --> 
+        <div class="overlay-subnav"></div> 
+        <div class="col-sm-12 wt-navbar-bg">
+          <nav class="wt-navbar row"> 
+            <div class="container">
+              <div class="wt-navbar-container">    
                 <div class="wt-navbar-logo">
                   <a class="wt-navbar-brand" href="index.html"></a>
+                </div>          
+                <div class="wt-navbar-left">                
+                  <ul class="wt-navbar-items">
+                    <li class="selected"><a href="platform-tour.html">PLATFORM TOUR</a></li>
+                    <li>
+                      <a href="#" id="nav-why-wootag">WHY WOOTAG  <i class="material-icons">arrow_drop_down</i></a>
+                      <div class="navbar-dropdown row">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-sm-12 col-md-4 subnav-item">
+                              <a href="why-wootag-business.html" class="subnav-link">
+                                <div class="subnav-title">Business Owners</div>
+                                <p class="subnav-description">Give your videos powerful interactivity and generate more high-quality leads and sales</p>
+                                <div class="button-circular"><i class="material-icons">arrow_forward</i></div>
+                              </a>
+                            </div>
+                            <div class="col-sm-12 col-md-4 subnav-item">
+                              <a href="why-wootag-agencies.html" class="subnav-link">
+                                <div class="subnav-title">Agencies</div>
+                                <p class="subnav-description">Unlock the Real View Experience for your client campaigns with platform enabling interactivity</p>
+                                <div class="button-circular"><i class="material-icons">arrow_forward</i></div>
+                              </a>
+                            </div>
+                            <div class="col-sm-12 col-md-4 subnav-item">
+                              <a href="why-wootag-enterprise.html" class="subnav-link">
+                                <div class="subnav-title">Enterprise</div>
+                                <p class="subnav-description">Improve your results with a scalable interactive video platform for business that will give a massive</p>
+                                <div class="button-circular"><i class="material-icons">arrow_forward</i></div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href="explore.html">EXPLORE</a></li>
+                    <li><a href="#">GET STARTED</a></li>
+                    <li><a href="#">BLOG</a></li>
+                  </ul>
                 </div>
-                <ul class="wt-navbar-items">
-                  <li class="selected"><a href="#">PLATFORM TOUR</a></li>
-                  <li><a href="#">WHY WOOTAG</a></li>
-                  <li><a href="explore.html">EXPLORE</a></li>
-                  <li><a href="#">GET STARTED</a></li>
-                  <li><a href="#">BLOG</a></li>
-                </ul>                
                 <div class="mobile-menu-btn">
                   <div class="menu-open">                    
-                    <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
                   </div>
@@ -49,17 +79,15 @@
                     <div class="button-circular button--gray"><i class="material-icons">close</i></div>
                   </div>
                 </div>
+                <div class="wt-navbar-right">
+                  <div class="login_link hide-for-small"><a href="signin.html">LOGIN</a></div>
+                  <a href="signup.html"><div class="wt-button wt-button--navbar">TRY FOR FREE</div></a>
+                </div> 
               </div>
-              <div class="wt-navbar-right">
-                <div class="login_link hide-for-small"><a href="signin.html">LOGIN</a></div>
-                <a href="signup.html"><div class="wt-button wt-button--navbar">TRY FOR FREE</div></a>
-              </div>              
-              
-            </div>
-          </div>      
-        </nav>
-      </div>
-    </header>
+            </div>      
+          </nav>        
+        </div>
+      </header>
     <main class="wt-body row">
       <div class="container-fluid">
         <div class="row bg-gradient">
@@ -75,49 +103,183 @@
             <!-- Main platform visual/video -->
             <div class="row row-centered row__padT100" id="platform-interactivity">
               <div class="col-sm-12 col-md-10 noHoriPaddingOnMobile">
-                <div class="home-featured-player">                  
-                  <div class="featured-player">
-                    <img src="images/video-sample.jpg" alt="featured"/>
-                  </div>
+                <div class="demo-featured-player">                  
+                    <div class="featured-player">
+                        <img src="images/16x8.jpg" alt="featured"/>
+                        <div class="video-demo"><video src="images/sharks.mp4" playsinline="true" style="object-fit: fill; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px;" preload="true" id="platform-demo-video"><source src="images/sharks.mp4"></video></div>
+                          <div class="video-overlay platform-demo">
+                            <div class="timeline">
+                              <div class="progressbar">
+                                <div class="base"></div>
+                                <div class="progress"></div>
+                                <div class="dots">
+                                  <!-- <div class="dot"></div>  -->
+                                </div>
+                              </div>
+                              <div class="tag-preview disappear">
+                                <div class="tag-img" style="background-image:url(images/watch-thumb.png)"></div>
+                                <div class="tag-title">Automatic Diving Chronograph</div>
+                                <div class="wt-button button--red tag-button">BUY NOW</div>
+                                <div class="click-simulate"></div>
+                              </div>
+                            </div>
+                            <div class="details platform-fake-player-details">
+                              <div class="detail commerce" data-item="Commerce" data-index="0">
+                                <div>
+                                  <div class="detail-img" style="background-image:url(images/detail-commerce.png)"></div>
+                                  <div class="detail-content">
+                                    <div class="text">
+                                      <h3 class="wt-title">Unisex T-shirt in black $29.00</h3>
+                                      <p>Straight-cut T-shirt in soft cotton jersey with a rounded hem. Slightly longer at the back.</p>
+                                      <div class="wt-button button--gray">Shop Now</div>
+                                    </div>
+                                    <div class="button-circular button--gray filled"><i class="material-icons">close</i></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="detail leadgen" data-item="Lead Gen" data-index="1">
+                                <div>
+                                  <div class="detail-img" style="background-image:url(images/detail-leadgen.png)"></div>
+                                  <div class="detail-content">
+                                    <div class="text">
+                                      <h3 class="wt-title">Subscribe now and enjoy 3 months free service</h3>
+                                      <input type="text" placeholder="your email address" class="form-control large"/>
+                                      <div class="wt-button button--red">Subscribe</div>
+                                    </div>
+                                    <div class="button-circular button--gray"><i class="material-icons">close</i></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="detail storelocator" data-item="Store Locator" data-index="2">
+                                <div>
+                                  <div class="detail-img" style="background-image:url(images/watch1.png)"></div>
+                                  <div class="detail-content">
+                                    <div class="text">
+                                      <h3 class="wt-title">Title Store Locator</h3>
+                                      <p>Our revolutionary video experience turns viewers into customers by letting them interact with your video.</p>
+                                      <div class="wt-button">Buy Now</div>
+                                    </div>
+                                    <div class="button-circular button--gray"><i class="material-icons">close</i></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="detail showcase" data-item="Showcase" data-index="3">
+                                <div>
+                                  <div class="detail-img" style="background-image:url(images/watch1.png)"></div>
+                                  <div class="detail-content">
+                                    <div class="text">
+                                      <h3 class="wt-title">Title Showcase</h3>
+                                      <p>Our revolutionary video experience turns viewers into customers by letting them interact with your video.</p>
+                                      <div class="wt-button">Buy Now</div>
+                                    </div>
+                                    <div class="button-circular button--gray"><i class="material-icons">close</i></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="detail chapters" data-item="Chapters" data-index="4">
+                                <div>
+                                  <div class="detail-img" style="background-image:url(images/watch1.png)"></div>
+                                  <div class="detail-content">
+                                    <div class="text">
+                                      <h3 class="wt-title">Title for Chapters</h3>
+                                      <p>Our revolutionary video experience turns viewers into customers by letting them interact with your video.</p>
+                                      <div class="wt-button">Buy Now</div>
+                                    </div>
+                                    <div class="button-circular button--gray"><i class="material-icons">close</i></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="detail offers" data-item="Offers" data-index="5">
+                                <div>
+                                  <div class="detail-img" style="background-image:url(images/detail-offers.jpg)"></div>
+                                  <div class="detail-content">
+                                    <div class="text">
+                                      <h3 class="wt-title">Order now and get $25 OFF from your next order</h3>
+                                      <div>
+                                        <div class="wt-button button--red">Order Now</div>
+                                        <div class="button-circular"><i class="material-icons">phone</i></div>
+                                      </div>
+                                      
+                                    </div>
+                                    <div class="button-circular button--gray"><i class="material-icons">close</i></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="detail poll" data-item="Poll" data-index="6">
+                                <div>
+                                  <div class="detail-img" style="background-image:url(images/watch1.png)"></div>
+                                  <div class="detail-content">
+                                    <div class="text">
+                                      <h3 class="wt-title">Title for Poll</h3>
+                                      <p>Our revolutionary video experience turns viewers into customers by letting them interact with your video.</p>
+                                      <div class="wt-button">Buy Now</div>
+                                    </div>
+                                    <div class="button-circular button--gray"><i class="material-icons">close</i></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="detail booking" data-item="Booking" data-index="7">
+                                <div>
+                                  <div class="detail-img" style="background-image:url(images/detail-bookings.png)"></div>
+                                  <div class="detail-content">
+                                    <div class="text">
+                                      <div class="stars"><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i></div>
+                                      <h3 class="wt-title">Sauvignon Blanc Art Hotel Bordeaux</h3>
+                                      <div class="location"><i class="material-icons">place</i><span>Bordeaux, Nouvelle-Aquitaine, France</span></div>
+                                      <p>In every sense, The Sauvignon Blanc Art Hotels are the pinnacle of a luxury travel experience.</p>
+                                      <div>
+                                        <div class="wt-button button--parrot_green">Book Now</div>
+                                        <div class="button-circular"><i class="material-icons">phone</i></div>
+                                        <div class="button-circular"><i class="material-icons">mail_outline</i></div>
+                                      </div>
+                                    </div>
+                                    <div class="button-circular button--gray"><i class="material-icons">close</i></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="overlay-blocker"></div> <!-- to block the button hovers on the demo video -->
+                            </div>
+                          </div>
+                      </div>
                 </div>
               </div>
             </div>
             <!-- platform-interactivity slider -->
             <div class="row row-centered platform-interactivity row__padB100">
-              <div class="col-sm-12 col-md-9">
+              <div class="col-sm-12 col-md-10">
                 <section class="slider-platform-interactivity">
-                  <div class="slide-platform-interactivity selected">
-                    <div class="item-icon"><i class="material-icons">shopping_basket</i></div>
+                  <div class="slide-platform-interactivity"> <!-- selected -->
+                    <div class="item-icon"><img src="images/platform_tour/icons/icons8-shopping-basket.svg" alt="Commerce" /></div>
                     <div class="item-name">Commerce</div>
                   </div>
                   <div class="slide-platform-interactivity">
-                    <div class="item-icon"><i class="material-icons">group</i></div>
-                    <div class="item-name">Participation</div>
+                    <div class="item-icon"><img src="images/platform_tour/icons/icons8-user-groups.svg" alt="Lead Gen" /></div>
+                    <div class="item-name">Lead Gen</div>
                   </div>
                   <div class="slide-platform-interactivity">
-                    <div class="item-icon"><i class="material-icons">flight</i></div>
-                    <div class="item-name">Booking</div>
-                  </div>
-                  <div class="slide-platform-interactivity">
-                    <div class="item-icon"><i class="material-icons">stars</i></div>
-                    <div class="item-name">Offers</div>
-                  </div>
-                  <div class="slide-platform-interactivity">
-                    <div class="item-icon"><i class="material-icons">map</i></div>
+                    <div class="item-icon"><img src="images/platform_tour/icons/icons8-map-marker.svg" alt="Store Locator" /></div>
                     <div class="item-name">Store Locator</div>
                   </div>
                   <div class="slide-platform-interactivity">
-                    <div class="item-icon"><i class="material-icons">supervised_user_circle</i></div>
-                    <div class="item-name">Lead Generation</div>
+                    <div class="item-icon"><img src="images/platform_tour/icons/icons8-gallery.svg" alt="Showcase" /></div>
+                    <div class="item-name">Showcase</div>
                   </div>
                   <div class="slide-platform-interactivity">
-                    <div class="item-icon"><i class="material-icons">poll</i></div>
+                    <div class="item-icon"><img src="images/platform_tour/icons/icons8-apple-app-store.svg" alt="Chapters" /></div>
+                    <div class="item-name">Chapters</div>
+                  </div>  
+                  <div class="slide-platform-interactivity">
+                    <div class="item-icon"><img src="images/platform_tour/icons/icons8-discount.svg" alt="Offers" /></div>
+                    <div class="item-name">Offers</div>
+                  </div>
+                  <div class="slide-platform-interactivity">
+                    <div class="item-icon"><img src="images/platform_tour/icons/icons8-poll.svg" alt="Poll" /></div>
                     <div class="item-name">Poll</div>
                   </div>
                   <div class="slide-platform-interactivity">
-                    <div class="item-icon"><i class="material-icons">phone_iphone</i></div>
-                    <div class="item-name">Games / App Install</div>
-                  </div>                                
+                    <div class="item-icon"><img src="images/platform_tour/icons/icons8-airport.svg" alt="Booking" /></div>
+                    <div class="item-name">Booking</div>
+                  </div>                              
                 </section>
                 <div class="slider-buttons">
                   <div class="interactivity-slide-prev-button">
@@ -132,26 +294,26 @@
                 <div class="interactivity-item-detail" data-item="Commerce" data-index="0">
                   <p>Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
                 </div>
-                <div class="interactivity-item-detail" data-item="Participation" data-index="1">
-                  <p>Participation, Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
+                <div class="interactivity-item-detail" data-item="Lead Gen" data-index="1">
+                  <p>Lead Gen, Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
                 </div>
-                <div class="interactivity-item-detail" data-item="Booking" data-index="2">
-                  <p>Booking, Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
-                </div>
-                <div class="interactivity-item-detail" data-item="Offers" data-index="3">
-                  <p>Offers, Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
-                </div>
-                <div class="interactivity-item-detail" data-item="Store Locator" data-index="4">
+                <div class="interactivity-item-detail" data-item="Store Locator" data-index="2">
                   <p>Store Locator, Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
                 </div>
-                <div class="interactivity-item-detail" data-item="Lead Generation" data-index="5">
-                  <p>Lead Generation, Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
+                <div class="interactivity-item-detail" data-item="Showcase" data-index="3">
+                  <p>Showcase, Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
+                </div>
+                <div class="interactivity-item-detail" data-item="Chapters" data-index="4">
+                  <p>Chapters, Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
+                </div>
+                <div class="interactivity-item-detail" data-item="Offers" data-index="5">
+                  <p>Offers, Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
                 </div>
                 <div class="interactivity-item-detail" data-item="Poll" data-index="6">
                   <p>Poll, Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
                 </div>
-                <div class="interactivity-item-detail" data-item="Games / App Install" data-index="7">
-                  <p>Games / App Install, Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
+                <div class="interactivity-item-detail" data-item="Booking" data-index="7">
+                  <p>Booking, Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
                 </div>
               </div>
             </div>                    
@@ -338,9 +500,9 @@
           <div class="col-sm-12 col-md-3 col-lg-2">
             <h4>WHY WOOTAG</h4>
             <ul class="footer-links">
-              <li><a href="why-wootag.html#wootag-business">Business Owners</a></li>
-              <li><a href="why-wootag.html#wootag-agencies">Agencies</a></li>
-              <li><a href="why-wootag.html#wootag-enterprise">Enterprise</a></li>
+              <li><a href="why-wootag-business.html">Business Owners</a></li>
+              <li><a href="why-wootag-agencies.html">Agencies</a></li>
+              <li><a href="why-wootag-enterprise.html">Enterprise</a></li>
             </ul>
           </div>
           <div class="col-sm-12 col-md-3 col-lg-2">
@@ -355,6 +517,7 @@
             <ul class="footer-links">
               <li><a href="#">Blog</a></li>
               <li><a href="#">About</a></li>
+              <li><a href="#">Pricing</a></li>
               <li><a href="terms.html">Terms of Services</a></li>
               <li><a href="privacy-policy.html">Privacy Policy</a></li>
             </ul>

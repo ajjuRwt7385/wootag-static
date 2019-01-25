@@ -49,6 +49,24 @@ body {
   &:hover{
     background: $color_wootag_blue_hover;
   }
+  &.button--red{
+    background-color: $color_wootag_red;
+    &:hover{
+      background-color: $color_wootag_red_hover;
+    }
+  }
+  &.button--gray{
+    background-color: $bg_button_gray;
+    &:hover{
+      // background-color: $color_wootag_red_hover;
+    }
+  }
+  &.button--parrot_green{
+    background-color: $bg_button_parrot_green;
+    &:hover{
+      // background-color: $color_wootag_red_hover;
+    }
+  }
 }
 // Circular Play Button---
 .button-circular{
@@ -140,6 +158,19 @@ a:hover .button--pulsate,
   }
   100% {
     box-shadow: 0 0 0 20px rgba(31, 188, 240, 0);
+  }
+}
+
+@keyframes click-simulation
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 39, 39, 1);
+  }
+  60% {
+    box-shadow: 0 0 0 20px rgba(255, 39, 39, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 50px rgba(255, 39, 39, 0);
   }
 }
 
@@ -262,6 +293,9 @@ div.hr{
 }
 .row__padB100{
   padding-bottom: 50px;
+}
+.row__padT30{
+  padding-top:30px;
 }
 .marT50 {
   margin-top: 50px;

@@ -21,41 +21,69 @@
 <body class="" data-page="home"> <!-- add `wt-theme-dark` class for dark body -->
   <!-- Header -->
   <div class="container-fluid">
-    <header id="wt-header" class="row ">  <!-- add `wt-theme-dark` class to here or any parent for dark nav -->  
+    <header id="wt-header" class="row ">  <!-- add `wt-theme-dark` class to here or any parent for dark nav --> 
+      <div class="overlay-subnav"></div> 
       <div class="col-sm-12 wt-navbar-bg">
-        <nav class="wt-navbar row">      
+        <nav class="wt-navbar row"> 
           <div class="container">
-            <div class="wt-navbar-container">              
-              <div class="wt-navbar-left">
-                <div class="wt-navbar-logo">
-                  <a class="wt-navbar-brand" href="index.html"></a>
-                </div>
+            <div class="wt-navbar-container">    
+              <div class="wt-navbar-logo">
+                <a class="wt-navbar-brand" href="index.html"></a>
+              </div>          
+              <div class="wt-navbar-left">                
                 <ul class="wt-navbar-items">
                   <li><a href="platform-tour.html">PLATFORM TOUR</a></li>
-                  <li><a href="#">WHY WOOTAG</a></li>
+                  <li>
+                    <a href="#" id="nav-why-wootag">WHY WOOTAG  <i class="material-icons">arrow_drop_down</i></a>
+                    <div class="navbar-dropdown row">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-4 subnav-item">
+                            <a href="why-wootag-business.html" class="subnav-link">
+                              <div class="subnav-title">Business Owners</div>
+                              <p class="subnav-description">Give your videos powerful interactivity and generate more high-quality leads and sales</p>
+                              <div class="button-circular"><i class="material-icons">arrow_forward</i></div>
+                            </a>
+                          </div>
+                          <div class="col-sm-12 col-md-4 subnav-item">
+                            <a href="why-wootag-agencies.html" class="subnav-link">
+                              <div class="subnav-title">Agencies</div>
+                              <p class="subnav-description">Unlock the Real View Experience for your client campaigns with platform enabling interactivity</p>
+                              <div class="button-circular"><i class="material-icons">arrow_forward</i></div>
+                            </a>
+                          </div>
+                          <div class="col-sm-12 col-md-4 subnav-item">
+                            <a href="why-wootag-enterprise.html" class="subnav-link">
+                              <div class="subnav-title">Enterprise</div>
+                              <p class="subnav-description">Improve your results with a scalable interactive video platform for business that will give a massive</p>
+                              <div class="button-circular"><i class="material-icons">arrow_forward</i></div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                   <li><a href="explore.html">EXPLORE</a></li>
                   <li><a href="#">GET STARTED</a></li>
                   <li><a href="#">BLOG</a></li>
-                </ul>                
-                <div class="mobile-menu-btn">
-                  <div class="menu-open">                    
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                  </div>
-                  <div class="menu-close">
-                    <div class="button-circular button--gray"><i class="material-icons">close</i></div>
-                  </div>
+                </ul>
+              </div>
+              <div class="mobile-menu-btn">
+                <div class="menu-open">                    
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+                <div class="menu-close">
+                  <div class="button-circular button--gray"><i class="material-icons">close</i></div>
                 </div>
               </div>
               <div class="wt-navbar-right">
                 <div class="login_link hide-for-small"><a href="signin.html">LOGIN</a></div>
                 <a href="signup.html"><div class="wt-button wt-button--navbar">TRY FOR FREE</div></a>
-              </div>              
-              
+              </div> 
             </div>
           </div>      
-        </nav>
+        </nav>        
       </div>
     </header>
     <main class="wt-body row">
@@ -112,14 +140,74 @@
             <!-- Main home visual/video -->
             <div class="row row-centered">
               <div class="col-sm-12 col-md-10 noHoriPaddingOnMobile">
-                <div class="home-featured-player">
+                <div class="demo-featured-player">
                   <div class="pulse-bg-animation">
                     <div class="pulse"></div>
                     <div class="pulse"></div>
                     <div class="pulse"></div>
                   </div>
                   <div class="featured-player">
-                    <img src="images/video-sample.jpg" alt="featured"/>
+                    <img src="images/16x8.jpg" alt="featured"/>
+                    <div class="video-demo"><video src="images/sharks.mp4" playsinline="true" style="object-fit: fill; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px;" preload="true" id="home-demo-video"><source src="images/sharks.mp4"></video></div>
+                      <div class="video-overlay home-demo">
+                        <div class="timeline">
+                          <div class="progressbar">
+                            <div class="base"></div>
+                            <div class="progress"></div>
+                            <div class="dots">
+                              <!-- <div class="dot"></div>  -->
+                            </div>
+                          </div>
+                          <div class="tag-preview disappear">
+                            <div class="tag-img" style="background-image:url(images/watch-thumb.png)"></div>
+                            <div class="tag-title">Automatic Diving Chronograph</div>
+                            <div class="wt-button button--red tag-button">BUY NOW</div>
+                            <div class="click-simulate"></div>
+                          </div>
+                        </div>
+                        <div class="details home-fake-player-details">
+                          <div class="detail">
+                            <div>
+                              <div class="detail-img" style="background-image:url(images/watch1.png)"></div>
+                              <div class="detail-content">
+                                <div class="text">
+                                  <h3 class="wt-title">Automatic Diving Chronograph $3600</h3>
+                                  <p>Our revolutionary video experience turns viewers into customers by letting them interact with your video.</p>
+                                  <div class="wt-button">Buy Now</div>
+                                </div>
+                                <div class="button-circular button--gray"><i class="material-icons">close</i></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="detail">
+                            <div>
+                              <div class="detail-img" style="background-image:url(images/watch2.png)"></div>
+                              <div class="detail-content">
+                                <div class="text">
+                                  <h3 class="wt-title">Check our Store</h3>
+                                  <p>Our revolutionary video experience turns viewers into customers by letting them interact with your video.</p>
+                                  <div class="wt-button">Visit Now</div>
+                                </div>
+                                <div class="button-circular button--gray"><i class="material-icons">close</i></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="detail">
+                            <div>
+                              <div class="detail-img" style="background-image:url(images/watch1.png)"></div>
+                              <div class="detail-content">
+                                <div class="text">
+                                  <h3 class="wt-title">Title for Decision Tag</h3>
+                                  <p>Our revolutionary video experience turns viewers into customers by letting them interact with your video.</p>
+                                  <div class="wt-button">Buy Now</div>
+                                </div>
+                                <div class="button-circular button--gray"><i class="material-icons">close</i></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="overlay-blocker"></div> <!-- to block the button hovers on the demo video -->
+                        </div>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -127,8 +215,8 @@
             <!-- wootag platform -->
             <div class="row row-centered row__padTB100 zIndexOne">
               <div class="col-sm-12 col-md-8">
-                <div class="section-title">WOOTAG PLATFORM</div>
-                <h2 class="section-subtitle">Start to explore the interactive possibilities</h2>
+                <div class="section-title">TOUCHPOINTS</div>
+                <h2 class="section-subtitle">Interactivity with Impact</h2>
                 <p>Imagine if your viewers could explore your video, and step right into the world of your products? Wootag changes the way people experience video by giving them the power to buy products from within videos or to dig deeper into your brand - without needing to go anywhere else.</p>
                 <a href="platform-tour.html" class="link"><div class="button-circular button--filled pulsate"><i class="material-icons">arrow_forward</i></div></a>
               </div>
@@ -137,7 +225,7 @@
         </div>
       </div>
       <!-- Testimonial -->
-      <div class="container-fluid">        
+      <!-- <div class="container-fluid">        
         <div class="row row__padTB100 section-testimonial">
           <div class="container">
             <div class="row row-centered">
@@ -152,10 +240,10 @@
             </div>
           </div>          
         </div>
-      </div>
+      </div> -->
       <!-- Personas -->
       <div class="container-fluid">        
-          <div class="row row__padTB100 section-personas">
+          <div class="row row__padTB100 section-personas bg-gradient">
             <div class="container">
               <div class="row row-centered">
                 <div class="col-sm-12 col-md-8">
@@ -169,7 +257,7 @@
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-4 noHoriPaddingOnMobile">
                       <div class="persona-card">
-                        <a href="#">
+                        <a href="why-wootag-business.html">
                           <div class="persona-img"><img src="images/business-person.png" alt="Business Owners"/></div>
                           <div class="persona-text">
                             <h3>Business Owners</h3>
@@ -181,7 +269,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 noHoriPaddingOnMobile">
                       <div class="persona-card">
-                        <a href="#">
+                        <a href="why-wootag-agencies.html">
                           <div class="persona-img"><img src="images/agencies.jpg" alt="Agencies"/></div>
                           <div class="persona-text">
                             <h3>Agencies</h3>
@@ -193,7 +281,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 noHoriPaddingOnMobile">
                       <div class="persona-card">
-                        <a href="#">
+                        <a href="why-wootag-enterprise.html">
                           <div class="persona-img"><img src="images/enterprise.jpg" alt="Enterprise"/></div>
                           <div class="persona-text">
                             <h3>Enterprise</h3>
@@ -308,9 +396,9 @@
           <div class="col-sm-12 col-md-3 col-lg-2">
             <h4>WHY WOOTAG</h4>
             <ul class="footer-links">
-              <li><a href="why-wootag.html#wootag-business">Business Owners</a></li>
-              <li><a href="why-wootag.html#wootag-agencies">Agencies</a></li>
-              <li><a href="why-wootag.html#wootag-enterprise">Enterprise</a></li>
+              <li><a href="why-wootag-business.html">Business Owners</a></li>
+              <li><a href="why-wootag-agencies.html">Agencies</a></li>
+              <li><a href="why-wootag-enterprise.html">Enterprise</a></li>
             </ul>
           </div>
           <div class="col-sm-12 col-md-3 col-lg-2">
@@ -325,6 +413,7 @@
             <ul class="footer-links">
               <li><a href="#">Blog</a></li>
               <li><a href="#">About</a></li>
+              <li><a href="#">Pricing</a></li>
               <li><a href="terms.html">Terms of Services</a></li>
               <li><a href="privacy-policy.html">Privacy Policy</a></li>
             </ul>

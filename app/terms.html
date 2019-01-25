@@ -21,25 +21,55 @@
 <body class="" data-page="terms"> <!-- add `wt-theme-dark` class for dark body -->
   <!-- Header -->
   <div class="container-fluid">
-    <header id="wt-header" class="row ">  <!-- add `wt-theme-dark` class to here or any parent for dark nav -->  
-      <div class="col-sm-12 wt-navbar-bg">
-        <nav class="wt-navbar row">      
-          <div class="container">
-            <div class="wt-navbar-container">              
-              <div class="wt-navbar-left">
+      <header id="wt-header" class="row ">  <!-- add `wt-theme-dark` class to here or any parent for dark nav --> 
+        <div class="overlay-subnav"></div> 
+        <div class="col-sm-12 wt-navbar-bg">
+          <nav class="wt-navbar row"> 
+            <div class="container">
+              <div class="wt-navbar-container">    
                 <div class="wt-navbar-logo">
                   <a class="wt-navbar-brand" href="index.html"></a>
+                </div>          
+                <div class="wt-navbar-left">                
+                  <ul class="wt-navbar-items">
+                    <li><a href="platform-tour.html">PLATFORM TOUR</a></li>
+                    <li>
+                      <a href="#" id="nav-why-wootag">WHY WOOTAG  <i class="material-icons">arrow_drop_down</i></a>
+                      <div class="navbar-dropdown row">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-sm-12 col-md-4 subnav-item">
+                              <a href="why-wootag-business.html" class="subnav-link">
+                                <div class="subnav-title">Business Owners</div>
+                                <p class="subnav-description">Give your videos powerful interactivity and generate more high-quality leads and sales</p>
+                                <div class="button-circular"><i class="material-icons">arrow_forward</i></div>
+                              </a>
+                            </div>
+                            <div class="col-sm-12 col-md-4 subnav-item">
+                              <a href="why-wootag-agencies.html" class="subnav-link">
+                                <div class="subnav-title">Agencies</div>
+                                <p class="subnav-description">Unlock the Real View Experience for your client campaigns with platform enabling interactivity</p>
+                                <div class="button-circular"><i class="material-icons">arrow_forward</i></div>
+                              </a>
+                            </div>
+                            <div class="col-sm-12 col-md-4 subnav-item">
+                              <a href="why-wootag-enterprise.html" class="subnav-link">
+                                <div class="subnav-title">Enterprise</div>
+                                <p class="subnav-description">Improve your results with a scalable interactive video platform for business that will give a massive</p>
+                                <div class="button-circular"><i class="material-icons">arrow_forward</i></div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href="explore.html">EXPLORE</a></li>
+                    <li><a href="#">GET STARTED</a></li>
+                    <li><a href="#">BLOG</a></li>
+                  </ul>
                 </div>
-                <ul class="wt-navbar-items">
-                  <li><a href="platform-tour.html">PLATFORM TOUR</a></li>
-                  <li><a href="#">WHY WOOTAG</a></li>
-                  <li><a href="explore.html">EXPLORE</a></li>
-                  <li><a href="#">GET STARTED</a></li>
-                  <li><a href="#">BLOG</a></li>
-                </ul>                
                 <div class="mobile-menu-btn">
                   <div class="menu-open">                    
-                    <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
                   </div>
@@ -47,17 +77,15 @@
                     <div class="button-circular button--gray"><i class="material-icons">close</i></div>
                   </div>
                 </div>
+                <div class="wt-navbar-right">
+                  <div class="login_link hide-for-small"><a href="signin.html">LOGIN</a></div>
+                  <a href="signup.html"><div class="wt-button wt-button--navbar">TRY FOR FREE</div></a>
+                </div> 
               </div>
-              <div class="wt-navbar-right">
-                <div class="login_link hide-for-small"><a href="signin.html">LOGIN</a></div>
-                <a href="signup.html"><div class="wt-button wt-button--navbar">TRY FOR FREE</div></a>
-              </div>              
-              
-            </div>
-          </div>      
-        </nav>
-      </div>
-    </header>
+            </div>      
+          </nav>        
+        </div>
+      </header>
     <main class="wt-body row">
       <div class="container-fluid">
         <div class="row bg-gradient">
@@ -260,9 +288,9 @@
           <div class="col-sm-12 col-md-3 col-lg-2">
             <h4>WHY WOOTAG</h4>
             <ul class="footer-links">
-              <li><a href="why-wootag.html#wootag-business">Business Owners</a></li>
-              <li><a href="why-wootag.html#wootag-agencies">Agencies</a></li>
-              <li><a href="why-wootag.html#wootag-enterprise">Enterprise</a></li>
+              <li><a href="why-wootag-business.html">Business Owners</a></li>
+              <li><a href="why-wootag-agencies.html">Agencies</a></li>
+              <li><a href="why-wootag-enterprise.html">Enterprise</a></li>
             </ul>
           </div>
           <div class="col-sm-12 col-md-3 col-lg-2">
@@ -277,6 +305,7 @@
             <ul class="footer-links">
               <li><a href="#">Blog</a></li>
               <li><a href="#">About</a></li>
+              <li><a href="#">Pricing</a></li>
               <li><a href="terms.html">Terms of Services</a></li>
               <li><a href="privacy-policy.html">Privacy Policy</a></li>
             </ul>
